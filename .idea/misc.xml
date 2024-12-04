@@ -6,16 +6,24 @@
       <list>
         <option value="$PROJECT_DIR$/demo/pom.xml" />
         <option value="$PROJECT_DIR$/xcparent/pom.xml" />
+        <option value="$PROJECT_DIR$/xccommon/pom.xml" />
+        <option value="$PROJECT_DIR$/xcContent/pom.xml" />
+        <option value="$PROJECT_DIR$/xcContent/xccontent-model/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-generator/pom.xml" />
+        <option value="$PROJECT_DIR$/xccontent/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled/pom.xml" />
+        <option value="$PROJECT_DIR$/xc-content/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/demo/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled/pom.xml" />
+        <option value="$PROJECT_DIR$/xcContent/pom.xml" />
+        <option value="$PROJECT_DIR$/xcContent/untitled/pom.xml" />
+        <option value="$PROJECT_DIR$/xccontent/pom.xml" />
       </set>
     </option>
-  </component>
-  <component name="MavenRunner">
-    <option name="jreName" value="17" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />

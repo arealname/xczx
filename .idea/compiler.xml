@@ -7,7 +7,26 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
       </profile>
+      <profile name="Annotation profile for xuecheng-plus-content" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$PROJECT_DIR$/../../BaiduNetdiskDownload/repository/org/projectlombok/lombok/1.18.8/lombok-1.18.8.jar" />
+        </processorPath>
+        <module name="xuecheng-plus-content-service" />
+        <module name="xuecheng-plus-content-api" />
+        <module name="xccommon" />
+        <module name="xuecheng-plus-content-model" />
+        <module name="xuecheng-plus-generator" />
+      </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="17" />
+    <bytecodeTargetLevel target="17">
+      <module name="untitled" target="1.8" />
+      <module name="xcContent" target="1.8" />
+      <module name="xccontent-api" target="1.5" />
+      <module name="xccontent-model" target="1.8" />
+      <module name="xccontent-service" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

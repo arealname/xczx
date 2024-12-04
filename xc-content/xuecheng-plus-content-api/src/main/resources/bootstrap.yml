@@ -1,0 +1,25 @@
+
+spring:
+  application:
+    name: con-se
+
+  cloud:
+    nacos:
+      server-addr: 192.168.128.130:8848
+
+      discovery:
+        group: g1
+        namespace: xczx
+
+      config:
+        namespace: xczx
+        group: g1
+        file-extension: yml
+        refresh-enabled: true
+
+  profiles:
+    active: dev
+
+
+remote: 192.168.128.130
+

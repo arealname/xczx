@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/xc-content.iml" filepath="$PROJECT_DIR$/xc-content.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/xc-plus.iml" filepath="$PROJECT_DIR$/.idea/xc-plus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-system/xuecheng-plus-system-api/xuecheng-plus-system-api.iml" filepath="$PROJECT_DIR$/xuecheng-plus-system/xuecheng-plus-system-api/xuecheng-plus-system-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-system/xuecheng-plus-system-model/xuecheng-plus-system-model.iml" filepath="$PROJECT_DIR$/xuecheng-plus-system/xuecheng-plus-system-model/xuecheng-plus-system-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-system/xuecheng-plus-system-service/xuecheng-plus-system-service.iml" filepath="$PROJECT_DIR$/xuecheng-plus-system/xuecheng-plus-system-service/xuecheng-plus-system-service.iml" />
     </modules>
   </component>
 </project>

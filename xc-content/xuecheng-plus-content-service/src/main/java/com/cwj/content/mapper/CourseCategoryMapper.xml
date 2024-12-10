@@ -18,4 +18,13 @@
         id, name, label, parentid, is_show, orderby, is_leaf
     </sql>
 
+    <select id="selectTreeNodes" resultType="com.cwj.content.model.po.dto.CourseCategoryTreeDto">
+        WITH RECURSIVE CTE as(
+            select * from course_category c1 where parentid='0'
+            union all
+            select c.* from course_category c inner join CTE on c.parentid=CTE.id
+            )
+        select * from CTE
+    </select>
+
 </mapper>

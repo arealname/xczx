@@ -2,9 +2,11 @@ package com.cwj.content.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.cwj.content.model.po.CourseBase;
-import com.xuecheng.xccommon.PageParams;
-import com.xuecheng.xccommon.PageResult;
-import com.xuecheng.xccommon.dto.QueryCourseParamsDto;
+import com.cwj.xccommon.PageParams;
+import com.cwj.xccommon.PageResult;
+import com.cwj.content.model.po.dto.AddCourseDto;
+import com.cwj.content.model.po.dto.CourseBaseInfoDto;
+import com.cwj.content.model.po.dto.QueryCourseParamsDto;
 
 /**
  * <p>
@@ -17,4 +19,18 @@ import com.xuecheng.xccommon.dto.QueryCourseParamsDto;
 public interface CourseBaseService extends IService<CourseBase> {
 
     PageResult<CourseBase> list(PageParams pageParams, QueryCourseParamsDto queryCourseParamsDto);
+
+    /**
+     * @description 添加课程基本信息
+     * @param companyId  教学机构id
+     * @param addCourseDto  课程基本信息
+     * @return com.xuecheng.content.model.dto.CourseBaseInfoDto
+     * @author Mr.M
+     * @date 2022/9/7 17:51
+     */
+    CourseBaseInfoDto createCourseBase(Long companyId, AddCourseDto addCourseDto);
+
+    CourseBaseInfoDto gid(Long courseId);
+
+    CourseBaseInfoDto upd(CourseBaseInfoDto editCourseDto);
 }

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/tenant/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tenant/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/untitled/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/untitled/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xc-content/src/main/java" charset="UTF-8" />
@@ -23,10 +25,22 @@
     <file url="file://$PROJECT_DIR$/xcContent/xccontent-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xccommon/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xccommon/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xcgateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xcgateway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xcparent/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xcparent/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xcstorage/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xcstorage/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xuecheng-plus-generator/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xuecheng-plus-generator/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xuecheng-plus-media/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xuecheng-plus-media/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xuecheng-plus-media/xuecheng-plus-media-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xuecheng-plus-media/xuecheng-plus-media-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xuecheng-plus-media/xuecheng-plus-media-model/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xuecheng-plus-media/xuecheng-plus-media-model/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xuecheng-plus-media/xuecheng-plus-media-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xuecheng-plus-media/xuecheng-plus-media-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xuecheng-plus-system/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xuecheng-plus-system/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xuecheng-plus-system/xuecheng-plus-system-api/src/main/java" charset="UTF-8" />

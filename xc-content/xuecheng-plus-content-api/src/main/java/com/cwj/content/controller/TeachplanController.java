@@ -1,5 +1,6 @@
 package com.cwj.content.controller;
 
+import com.cwj.content.model.po.dto.BindTeachplanMediaDto;
 import com.cwj.content.model.po.dto.SaveTeachplanDto;
 import com.cwj.content.model.po.dto.TeachplanDto;
 import com.cwj.content.service.TeachplanService;
@@ -57,4 +58,11 @@ public class TeachplanController {
     public Result movedown(@PathVariable Long planId){
         return teachplanService.mv(planId,2);
     }
+
+    @ApiOperation(value = "课程计划和媒资信息绑定")
+    @PostMapping("/teachplan/association/media")
+    public void associationMedia(@RequestBody BindTeachplanMediaDto bindTeachplanMediaDto){
+        teachplanService.associationMedia(bindTeachplanMediaDto);
+    }
+
 }

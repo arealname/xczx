@@ -1,0 +1,21 @@
+
+
+spring:
+  application:
+    name: tenant
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db0?serverTimezone=UTC&userUnicode=true&useSSL=false
+    username: root
+    password: 123456
+  cloud:
+    nacos:
+      server-addr: 192.168.128.130:8848
+
+
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+server:
+  port: 8089

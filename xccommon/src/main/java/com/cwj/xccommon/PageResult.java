@@ -27,4 +27,10 @@ public class PageResult<T> implements Serializable {
     private long pageSize=10L;
 
 
+    public PageResult(List<T> list, long total, Long pageNo, Long pageSize) {
+        items=list;
+        counts=total;
+        currentpage=pageNo;
+        this.pageSize=pageSize;
+    }
 }

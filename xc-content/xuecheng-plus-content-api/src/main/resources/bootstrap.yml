@@ -1,20 +1,20 @@
 
 spring:
   application:
-    name: con-se
+    name: co-se
 
   cloud:
     nacos:
       server-addr: 192.168.128.130:8848
 
       discovery:
-        group: g1
         namespace: xczx
+        group: group001
 
       config:
         namespace: xczx
-        group: g1
-        file-extension: yml
+        group: group001
+        file-extension: yaml
         refresh-enabled: true
 
   profiles:

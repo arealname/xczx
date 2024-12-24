@@ -7,21 +7,27 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
       </profile>
-      <profile name="Annotation profile for xuecheng-plus-content" enabled="true">
+      <profile name="Annotation profile for xuecheng-plus-media" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$PROJECT_DIR$/../../BaiduNetdiskDownload/repository/org/projectlombok/lombok/1.18.8/lombok-1.18.8.jar" />
         </processorPath>
-        <module name="xuecheng-plus-system-service" />
         <module name="xccommon" />
-        <module name="xuecheng-plus-system-model" />
-        <module name="xuecheng-plus-system-api" />
+        <module name="xuecheng-plus-media-api" />
+        <module name="xcstorage" />
         <module name="xuecheng-plus-content-service" />
-        <module name="xuecheng-plus-content-api" />
+        <module name="xuecheng-plus-media-service" />
         <module name="xuecheng-plus-content-model" />
         <module name="xuecheng-plus-generator" />
+        <module name="xuecheng-plus-media-model" />
+        <module name="xuecheng-plus-system-service" />
+        <module name="xuecheng-plus-system-model" />
+        <module name="xuecheng-plus-system-api" />
+        <module name="xuecheng-plus-content-api" />
+        <module name="xcgateway" />
+        <module name="tenant" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17">

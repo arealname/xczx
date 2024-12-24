@@ -140,7 +140,7 @@ public class CourseBaseServiceImpl extends ServiceImpl<CourseBaseMapper, CourseB
     @Override
     public CourseBaseInfoDto gid(Long courseId) {
         //查询课程信息
-       return getCourseBaseInfo(courseId);
+        return getCourseBaseInfo(courseId);
     }
 
     @Autowired
@@ -151,8 +151,8 @@ public class CourseBaseServiceImpl extends ServiceImpl<CourseBaseMapper, CourseB
         CourseBase courseBase = new CourseBase();
         CourseMarket courseMarket = new CourseMarket();
 
-        BeanUtils.copyProperties(editCourseDto,courseBase);
-        BeanUtils.copyProperties(editCourseDto,courseMarket);
+        BeanUtils.copyProperties(editCourseDto, courseBase);
+        BeanUtils.copyProperties(editCourseDto, courseMarket);
 
         updateById(courseBase);
 //        courseMarketMapper.updateById(courseMarket);
@@ -188,7 +188,6 @@ public class CourseBaseServiceImpl extends ServiceImpl<CourseBaseMapper, CourseB
 
 
     }
-
 
 
     private int saveCourseMarket(CourseMarket courseMarketNew) {

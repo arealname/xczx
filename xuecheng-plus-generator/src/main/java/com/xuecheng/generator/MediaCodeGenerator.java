@@ -19,7 +19,7 @@ public class MediaCodeGenerator {
 	private static final String SERVICE_NAME = "media";
 
 	private static final String DATA_SOURCE_USER_NAME  = "root";
-	private static final String DATA_SOURCE_PASSWORD  = "mysql";
+	private static final String DATA_SOURCE_PASSWORD  = "123456";
 	private static final String[] TABLE_NAMES = new String[]{
 			"media_files",
 			"media_process",
@@ -42,7 +42,7 @@ public class MediaCodeGenerator {
 		GlobalConfig gc = new GlobalConfig();
 		gc.setFileOverride(true);
 		gc.setOutputDir(System.getProperty("user.dir") + "/xuecheng-plus-generator/src/main/java");
-		gc.setAuthor("itcast");
+		gc.setAuthor("cwj");
 		gc.setOpen(false);
 		gc.setSwagger2(false);
 		gc.setServiceName("%sService");

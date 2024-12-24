@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: xcgate
+
+  cloud:
+    nacos:
+      config:
+        namespace: xczx
+        group: group001
+        file-extension: yaml
+
+      discovery:
+        namespace: xczx
+        group: group001
+
+      server-addr: 192.168.128.130:8848
+  profiles:
+    active: dev

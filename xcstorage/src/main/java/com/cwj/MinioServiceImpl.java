@@ -61,7 +61,7 @@ public class MinioServiceImpl implements MinioUtil {
 
     @Override
     public String uploadHtmlFile(String prefix, String filename, InputStream inputStream) {
-        String buildpath = buildpath(prefix, filename);
+        String buildpath =prefix+"/"+ filename;
 
         try {
             PutObjectArgs build1 = PutObjectArgs.builder().bucket(minioProperties.getMinioBucket())

@@ -165,7 +165,7 @@ public class CourseBaseServiceImpl extends ServiceImpl<CourseBaseMapper, CourseB
     @Autowired
     CourseCategoryMapper courseCategoryMapper;
 
-    private CourseBaseInfoDto getCourseBaseInfo(Long courseId) {
+    public CourseBaseInfoDto getCourseBaseInfo(Long courseId) {
 
         CourseBase courseBase = courseBaseMapper.selectById(courseId);
         if (courseBase == null) {

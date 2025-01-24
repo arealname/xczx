@@ -55,8 +55,7 @@ public class MediaFilesController {
      * @param folder
      * @param objectName
      * @return
-     * @throws IOException
-     * 生成一个dto给服务
+     * @throws IOException 生成一个dto给服务
      */
     @RequestMapping(value = "/upload/coursefile", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     @ResponseBody
@@ -64,6 +63,7 @@ public class MediaFilesController {
                                       @RequestParam(value = "folder", required = false) String folder,
                                       @RequestParam(value = "objectName", required = false) String objectName) throws IOException {
 
+        System.out.println("到达miclient1111........");
         Long companyId = 1232141425L;
         UploadFileParamsDto uploadFileParamsDto = new UploadFileParamsDto();
         //文件大小
@@ -84,11 +84,27 @@ public class MediaFilesController {
         //文件路径
         String absolutePath = tempFile.getAbsolutePath();
         //上传文件
-        UploadFileResultDto uploadFileResultDto = mediaFileService.uploadFile(companyId, uploadFileParamsDto, absolutePath,folder,objectName);
+        UploadFileResultDto uploadFileResultDto = mediaFileService.uploadFile(companyId, uploadFileParamsDto, absolutePath, folder, objectName);
 
         return uploadFileResultDto;
     }
 
+
+    @RequestMapping(value = "/upload/coursehtml", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @ResponseBody
+    public String  uploadhtml(@RequestPart("filedata") MultipartFile filedata,
+                              @RequestParam(value = "folder", required = false) String folder,
+                              @RequestParam(value = "objectName", required = false) String objectName) {
+        try {
+            System.out.println("到达miclient222........");
+            mediaFileService.uploadHtml(objectName, filedata);
+        } catch (Exception e) {
+            System.out.println("exception:999:"+ e);
+            return "exception:999:"+ e;
+        }
+
+        return "6666666";
+    }
 
 
 }

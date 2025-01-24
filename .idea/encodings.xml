@@ -13,6 +13,8 @@
     <file url="file://$PROJECT_DIR$/xc-content/xuecheng-plus-content-model/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xc-content/xuecheng-plus-content-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xc-content/xuecheng-plus-content-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xc-message-sdk/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xc-message-sdk/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xcContent/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xcContent/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xcContent/untitled/src/main/java" charset="UTF-8" />
@@ -31,6 +33,10 @@
     <file url="file://$PROJECT_DIR$/xcparent/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xcstorage/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xcstorage/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xuecheng-plus-auth/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xuecheng-plus-auth/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xuecheng-plus-checkcode/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xuecheng-plus-checkcode/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xuecheng-plus-generator/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xuecheng-plus-generator/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xuecheng-plus-media/src/main/java" charset="UTF-8" />

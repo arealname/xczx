@@ -161,5 +161,10 @@ public class TeachplanServiceImpl extends ServiceImpl<TeachplanMapper, Teachplan
         return teachplanMedia;
     }
 
+    @Override
+    public void rea(Long teachPlanId, Long mediaId) {
+        teachplanMediaMapper.delete(new LambdaQueryWrapper<TeachplanMedia>().eq(TeachplanMedia::getTeachplanId,teachPlanId).eq(TeachplanMedia::getMediaId,mediaId));
+    }
+
 
 }

@@ -2,6 +2,7 @@ package com.cwj.content.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.cwj.content.model.po.CoursePublish;
+import com.cwj.content.model.po.dto.CoursePreviewDto;
 
 /**
  * <p>
@@ -13,4 +14,8 @@ import com.cwj.content.model.po.CoursePublish;
  */
 public interface CoursePublishService extends IService<CoursePublish> {
 
+    public CoursePreviewDto getCoursePreviewInfo(Long courseId);
+
+
+    public void publishCourse(Long companyId,Long courseId);
 }

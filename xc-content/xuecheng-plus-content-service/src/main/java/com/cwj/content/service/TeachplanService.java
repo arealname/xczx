@@ -37,4 +37,5 @@ public interface TeachplanService extends IService<Teachplan> {
      */
     public TeachplanMedia associationMedia(BindTeachplanMediaDto bindTeachplanMediaDto);
 
+    void rea(Long teachPlanId, Long mediaId);
 }

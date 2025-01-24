@@ -33,6 +33,7 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.io.*;
 import java.security.MessageDigest;
@@ -145,7 +146,7 @@ public class MediaFileServiceImpl implements MediaFileService {
             throw new RuntimeException(e);
         }
 
-        System.out.println("外面:" + this);
+
 
         MediaFiles mediaFiles = null;
         try {
@@ -160,6 +161,20 @@ public class MediaFileServiceImpl implements MediaFileService {
         return uploadFileResultDto;
 
     }
+
+
+    @Override
+    public String uploadHtml(String fname, MultipartFile f) {
+        try {
+            System.out.println(88888);
+            minioUtil.uploadHtmlFile("course",fname,f.getInputStream());
+        } catch (Exception e) {
+            System.out.println("发生错误");
+            throw new RuntimeException(e);
+        }
+        return "666";
+    }
+
 
 
 
@@ -181,8 +196,9 @@ public class MediaFileServiceImpl implements MediaFileService {
             mediaFiles.setBucket(bu);
             mediaFiles.setStatus("1");
 
-            String buildpath = minioUtil.buildpath(prefix, miniofilename);
-            mediaFiles.setUrl(buildpath);
+
+
+            mediaFiles.setUrl(miniofilename);
 
             mediaFiles.setCreateDate(LocalDateTime.now());
             int insert = mediaFilesMapper.insert(mediaFiles);
@@ -280,7 +296,7 @@ public class MediaFileServiceImpl implements MediaFileService {
         //文件扩展名
         String extName = fileName.substring(fileName.lastIndexOf("."));
 
-        String targetpath=folder+"/"+fileMd5+extName;
+        String targetpath=folder+fileMd5+extName;
 
 
         System.out.println(targetpath);
@@ -332,12 +348,17 @@ public class MediaFileServiceImpl implements MediaFileService {
 
             uploadFileParamsDto.setFileType(tp);
             addProcessing(fileMd5,fileName,uploadFileParamsDto,"mediafiles",targetpath);
-            updateDb(companyId,p,fileMd5,uploadFileParamsDto,"mediafiles/"+targetpath);
+            updateDb(companyId,p,fileMd5,uploadFileParamsDto,"/mediafiles/"+targetpath);
             System.out.println("合并完成");
         }
         else System.out.println("合并失败");
         return RestResponse.success(b);
 
+    }
+
+    @Override
+    public MediaFiles getFileById(String mediaId) {
+        return mediaFilesMapper.selectById(mediaId);
     }
 
     private void addProcessing(String fileMd5, String fileName, UploadFileParamsDto uploadFileParamsDto, String bu,String p) {

@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: checkcode
+  cloud:
+    nacos:
+      server-addr: 192.168.128.130:8848
+      discovery:
+        namespace: xczx
+        group: group001
+      config:
+        namespace: xczx
+        group: group001
+        file-extension: yaml
+        refresh-enabled: true
+        shared-configs:
+          - data-id: redis-${spring.profiles.active}.yaml
+            group: group001
+            refresh: true
+
+  profiles:
+    active: dev

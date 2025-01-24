@@ -115,5 +115,12 @@
             <scope>compile</scope>
         </dependency>
 
+
+        <dependency>
+            <groupId>com.cwj</groupId>
+            <artifactId>xc-message-sdk</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
     </dependencies>
 </project>

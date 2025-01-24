@@ -21,7 +21,7 @@ public class MessageCodeGenerator {
 	//数据库账号
 	private static final String DATA_SOURCE_USER_NAME  = "root";
 	//数据库密码
-	private static final String DATA_SOURCE_PASSWORD  = "mysql";
+	private static final String DATA_SOURCE_PASSWORD  = "123456";
 	//生成的表
 	private static final String[] TABLE_NAMES = new String[]{
 			"mq_message",
@@ -50,7 +50,7 @@ public class MessageCodeGenerator {
 		gc.setFileOverride(true);
 		//生成路径
 		gc.setOutputDir(System.getProperty("user.dir") + "/xuecheng-plus-generator/src/main/java");
-		gc.setAuthor("itcast");
+		gc.setAuthor("cwj");
 		gc.setOpen(false);
 		gc.setSwagger2(false);
 		gc.setServiceName("%sService");
@@ -67,7 +67,7 @@ public class MessageCodeGenerator {
 		DataSourceConfig dsc = new DataSourceConfig();
 		dsc.setDbType(DbType.MYSQL);
 		dsc.setUrl("jdbc:mysql://192.168.128.130:3306/xczx"
-				+ "?serverTimezone=UTC&useUnicode=true&useSSL=false&characterEncoding=utf8");
+				+ "?serverTimezone=UTC&useUnicode=true&useSSL=false&characterEncoding=utf8&allowPublicKeyRetrieval=true");
 //		dsc.setDriverName("com.mysql.jdbc.Driver");
 		dsc.setDriverName("com.mysql.cj.jdbc.Driver");
 		dsc.setUsername(DATA_SOURCE_USER_NAME);

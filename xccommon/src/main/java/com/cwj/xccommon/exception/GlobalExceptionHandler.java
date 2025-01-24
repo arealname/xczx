@@ -28,4 +28,5 @@ public class GlobalExceptionHandler{
         System.out.println("发生RuntimeError:"+e);
         return new RestErrorResponse(e.getMessage());
     }
+
 }

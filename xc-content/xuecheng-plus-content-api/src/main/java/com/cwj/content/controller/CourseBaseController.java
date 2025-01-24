@@ -13,6 +13,7 @@ import io.swagger.annotations.ApiOperation;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -28,33 +29,38 @@ import org.springframework.web.bind.annotation.*;
 public class CourseBaseController {
 
     @Autowired
-    private CourseBaseService  courseBaseService;
+    private CourseBaseService courseBaseService;
 
     @PostMapping("/course/list")  //分页参数，课程条件
-    public PageResult<CourseBase> getcourselist(PageParams pageParams, @RequestBody QueryCourseParamsDto queryCourseParamsDto){
-        return courseBaseService.list(pageParams,queryCourseParamsDto);
+    public PageResult<CourseBase> getcourselist(PageParams pageParams, @RequestBody QueryCourseParamsDto queryCourseParamsDto) {
+        return courseBaseService.list(pageParams, queryCourseParamsDto);
     }
 
     @ApiOperation("新增课程基础信息")
     @PostMapping("/course")
-    public CourseBaseInfoDto createCourseBase(@RequestBody AddCourseDto addCourseDto){
+    public CourseBaseInfoDto createCourseBase(@RequestBody AddCourseDto addCourseDto) {
         //机构id，由于认证系统没有上线暂时硬编码
         Long companyId = 1232141425L;
-        return courseBaseService.createCourseBase(companyId,addCourseDto);
+        return courseBaseService.createCourseBase(companyId, addCourseDto);
     }
 
     @ApiOperation("根据课程id查询课程基础信息")
     @GetMapping("/course/{courseId}")
-    public CourseBaseInfoDto getCourseBaseById(@PathVariable Long courseId){
+    public CourseBaseInfoDto getCourseBaseById(@PathVariable Long courseId) {
+
+
+        //取出当前用户身份
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        System.out.println(principal);
+
         return courseBaseService.gid(courseId);
     }
 
     @ApiOperation("修改课程基础信息")
     @PutMapping("/course")
-    public CourseBaseInfoDto modifyCourseBase(@RequestBody CourseBaseInfoDto editCourseDto){
+    public CourseBaseInfoDto modifyCourseBase(@RequestBody CourseBaseInfoDto editCourseDto) {
         return courseBaseService.upd(editCourseDto);
     }
-
 
 
 }

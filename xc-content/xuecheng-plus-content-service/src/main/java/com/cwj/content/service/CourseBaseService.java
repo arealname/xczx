@@ -33,4 +33,6 @@ public interface CourseBaseService extends IService<CourseBase> {
     CourseBaseInfoDto gid(Long courseId);
 
     CourseBaseInfoDto upd(CourseBaseInfoDto editCourseDto);
+
+    CourseBaseInfoDto  getCourseBaseInfo(Long courseId);
 }

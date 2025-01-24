@@ -19,6 +19,9 @@
         <option value="$PROJECT_DIR$/xuecheng-plus-media/pom.xml" />
         <option value="$PROJECT_DIR$/xcstorage/pom.xml" />
         <option value="$PROJECT_DIR$/tenant/pom.xml" />
+        <option value="$PROJECT_DIR$/xc-message-sdk/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-auth/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-checkcode/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

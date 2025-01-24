@@ -12,5 +12,12 @@ import com.cwj.content.model.po.CoursePublishPre;
  * @since 2024-12-04
  */
 public interface CoursePublishPreService extends IService<CoursePublishPre> {
-
+    /**
+     * @description 提交审核
+     * @param courseId  课程id
+     * @return void
+     * @author Mr.M
+     * @date 2022/9/18 10:31
+     */
+    public void commitAudit(Long companyId,Long courseId);
 }

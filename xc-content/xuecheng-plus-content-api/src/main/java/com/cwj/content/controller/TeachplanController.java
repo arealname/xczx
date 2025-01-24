@@ -60,9 +60,14 @@ public class TeachplanController {
     }
 
     @ApiOperation(value = "课程计划和媒资信息绑定")
-    @PostMapping("/teachplan/association/media")
+    @PostMapping("/association/media")
     public void associationMedia(@RequestBody BindTeachplanMediaDto bindTeachplanMediaDto){
         teachplanService.associationMedia(bindTeachplanMediaDto);
+    }
+
+    @DeleteMapping("/association/media/{teachPlanId}/{mediaId}")
+    public void delrel(@PathVariable Long teachPlanId,@PathVariable Long mediaId){
+        teachplanService.rea(teachPlanId,mediaId);
     }
 
 }

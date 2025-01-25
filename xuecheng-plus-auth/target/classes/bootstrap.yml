@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: auth-service
+  cloud:
+    nacos:
+      server-addr: 192.168.128.130:8848
+      discovery:
+        namespace: xczx
+        group: group001
+      config:
+        namespace: xczx
+        group: group001
+        file-extension: yaml
+        refresh-enabled: true
+
+  profiles:
+    active: dev

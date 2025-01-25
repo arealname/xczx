@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cwj.tenant.mapper.T1212Mapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.cwj.tenant.po.T1212">
+        <result column="id" property="id"/>
+        <result column="city" property="city"/>
+        <result column="report_quarter" property="reportQuarter"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="tenant_name" property="tenantName"/>
+        <result column="primary_industry" property="primaryIndustry"/>
+        <result column="secondary_industry" property="secondaryIndustry"/>
+        <result column="tenant_origin" property="tenantOrigin"/>
+        <result column="tenant_origin_label" property="tenantOriginLabel"/>
+        <result column="primary_lease_type" property="primaryLeaseType"/>
+        <result column="secondary_lease_type" property="secondaryLeaseType"/>
+        <result column="tertiary_lease_type" property="tertiaryLeaseType"/>
+        <result column="lease_area" property="leaseArea"/>
+        <result column="cur_property_id" property="curPropertyId"/>
+        <result column="cur_district" property="curDistrict"/>
+        <result column="cur_submarket_id" property="curSubmarketId"/>
+        <result column="cur_property_type" property="curPropertyType"/>
+        <result column="cur_property_name" property="curPropertyName"/>
+        <result column="cur_property_grade" property="curPropertyGrade"/>
+        <result column="cur_property_grade_label" property="curPropertyGradeLabel"/>
+        <result column="cur_property_lon_lat" property="curPropertyLonLat"/>
+        <result column="cur_property_address" property="curPropertyAddress"/>
+        <result column="cur_submarket_name" property="curSubmarketName"/>
+        <result column="cur_property_origin_type" property="curPropertyOriginType"/>
+        <result column="prev_property_id" property="prevPropertyId"/>
+        <result column="prev_district" property="prevDistrict"/>
+        <result column="prev_submarket_id" property="prevSubmarketId"/>
+        <result column="prev_submarket_name" property="prevSubmarketName"/>
+        <result column="prev_property_type" property="prevPropertyType"/>
+        <result column="prev_property_name" property="prevPropertyName"/>
+        <result column="prev_property_grade" property="prevPropertyGrade"/>
+        <result column="prev_property_grade_label" property="prevPropertyGradeLabel"/>
+        <result column="prev_property_lon_lat" property="prevPropertyLonLat"/>
+        <result column="prev_property_address" property="prevPropertyAddress"/>
+        <result column="prev_property_origin_type" property="prevPropertyOriginType"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id
+        , city, report_quarter, tenant_id, tenant_name, primary_industry, secondary_industry, tenant_origin, tenant_origin_label, primary_lease_type, secondary_lease_type, tertiary_lease_type, lease_area, cur_property_id, cur_district, cur_submarket_id, cur_property_type, cur_property_name, cur_property_grade, cur_property_grade_label, cur_property_lon_lat, cur_property_address, cur_submarket_name, cur_property_origin_type, prev_property_id, prev_district, prev_submarket_id, prev_submarket_name, prev_property_type, prev_property_name, prev_property_grade, prev_property_grade_label, prev_property_lon_lat, prev_property_address, prev_property_origin_type, create_time, update_time
+    </sql>
+
+    <select id="getmap" resultType="com.cwj.tenant.po.T1212">
+        select * from t1213
+        <where>
+            <if test="dimension==1">and cur_property_id = #{propertyId}</if>
+            <if test="dimension==2">and prev_property_id = #{propertyId}</if>
+            and primary_lease_type = #{dimension}
+            and secondary_lease_type = '2'
+            and report_quarter between #{startTime} and #{endTime}
+        </where>
+    </select>
+
+
+</mapper>

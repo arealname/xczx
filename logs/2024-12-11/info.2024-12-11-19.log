@@ -1,0 +1,834 @@
+2024-12-11 19:23:16,610 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][ServerHttpAgent.java:169] - [NACOS SocketTimeoutException httpPost] currentServerAddr: http://192.168.128.130:8848， err : Read timed out
+2024-12-11 19:23:16,610 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][ServerHttpAgent.java:169] - [NACOS SocketTimeoutException httpPost] currentServerAddr: http://192.168.128.130:8848， err : Read timed out
+2024-12-11 19:23:16,638 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][ServerHttpAgent.java:189] - no available server, currentServerAddr : http://192.168.128.130:8848
+2024-12-11 19:23:16,638 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][ServerHttpAgent.java:189] - no available server, currentServerAddr : http://192.168.128.130:8848
+2024-12-11 19:23:16,642 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][ClientWorker.java:393] - [fixed-192.168.128.130_8848-xczx] [check-update] get changed dataId exception
+java.net.ConnectException: no available server, currentServerAddr : http://192.168.128.130:8848
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:190)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:67)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:380)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:347)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:535)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2024-12-11 19:23:16,642 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][ClientWorker.java:393] - [fixed-192.168.128.130_8848-xczx] [check-update] get changed dataId exception
+java.net.ConnectException: no available server, currentServerAddr : http://192.168.128.130:8848
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:190)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:67)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:380)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:347)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:535)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2024-12-11 19:23:16,705 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][ClientWorker.java:580] - longPolling error : 
+java.net.ConnectException: no available server, currentServerAddr : http://192.168.128.130:8848
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:190)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:67)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:380)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:347)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:535)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2024-12-11 19:23:16,705 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][ClientWorker.java:580] - longPolling error : 
+java.net.ConnectException: no available server, currentServerAddr : http://192.168.128.130:8848
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:190)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:67)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:380)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:347)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:535)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2024-12-11 19:23:17,154 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:23:17,154 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:23:18,738 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.128.130:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=system-service.yamlgroup001xczxsystem-service-dev.yamlgroup001e93b00d33973c19ccea1d66c7cbd1ffdxczxlogging-dev.yamlxuecheng-plus-commonxczxsystem-servicegroup001xczx, tenant=xczx}
+2024-12-11 19:23:18,739 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:494] - Execute via interceptors :[com.alibaba.nacos.client.config.impl.ConfigHttpClientManager$LimiterHttpClientRequestInterceptor@3fa61c94]
+2024-12-11 19:23:18,738 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.128.130:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=system-service.yamlgroup001xczxsystem-service-dev.yamlgroup001e93b00d33973c19ccea1d66c7cbd1ffdxczxlogging-dev.yamlxuecheng-plus-commonxczxsystem-servicegroup001xczx, tenant=xczx}
+2024-12-11 19:23:18,739 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:494] - Execute via interceptors :[com.alibaba.nacos.client.config.impl.ConfigHttpClientManager$LimiterHttpClientRequestInterceptor@3fa61c94]
+2024-12-11 19:23:19,595 DEBUG [com.alibaba.nacos.client.naming.updater][NamingProxy.java:195] - server list provided by user: [192.168.128.130:8848]
+2024-12-11 19:23:19,595 DEBUG [com.alibaba.nacos.client.naming.updater][NamingProxy.java:195] - server list provided by user: [192.168.128.130:8848]
+2024-12-11 19:23:19,981 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:23:19,981 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:23:19,981 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:23:19,981 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:23:21,450 WARN [HikariPool-1 housekeeper][HikariPool.java:787] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h23m20s150ms409µs600ns).
+2024-12-11 19:23:21,450 WARN [HikariPool-1 housekeeper][HikariPool.java:787] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h23m20s150ms409µs600ns).
+2024-12-11 19:23:21,450 DEBUG [HikariPool-1 housekeeper][HikariPool.java:421] - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-12-11 19:23:21,450 DEBUG [HikariPool-1 housekeeper][HikariPool.java:421] - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-12-11 19:23:21,450 DEBUG [HikariPool-1 housekeeper][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:23:21,450 DEBUG [HikariPool-1 housekeeper][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:23:21,451 DEBUG [HikariPool-1 housekeeper][HikariPool.java:342] - HikariPool-1 - Add connection elided, waiting 0, queue 1
+2024-12-11 19:23:21,451 DEBUG [HikariPool-1 housekeeper][HikariPool.java:342] - HikariPool-1 - Add connection elided, waiting 0, queue 1
+2024-12-11 19:23:21,451 DEBUG [HikariPool-1 housekeeper][HikariPool.java:342] - HikariPool-1 - Add connection elided, waiting 0, queue 1
+2024-12-11 19:23:21,451 DEBUG [HikariPool-1 housekeeper][HikariPool.java:342] - HikariPool-1 - Add connection elided, waiting 0, queue 1
+2024-12-11 19:23:21,451 DEBUG [HikariPool-1 housekeeper][HikariPool.java:342] - HikariPool-1 - Add connection elided, waiting 0, queue 1
+2024-12-11 19:23:21,451 DEBUG [HikariPool-1 housekeeper][HikariPool.java:342] - HikariPool-1 - Add connection elided, waiting 0, queue 1
+2024-12-11 19:23:21,451 DEBUG [HikariPool-1 housekeeper][HikariPool.java:342] - HikariPool-1 - Add connection elided, waiting 0, queue 1
+2024-12-11 19:23:21,451 DEBUG [HikariPool-1 housekeeper][HikariPool.java:342] - HikariPool-1 - Add connection elided, waiting 0, queue 1
+2024-12-11 19:23:21,451 DEBUG [HikariPool-1 housekeeper][HikariPool.java:342] - HikariPool-1 - Add connection elided, waiting 0, queue 1
+2024-12-11 19:23:21,451 DEBUG [HikariPool-1 housekeeper][HikariPool.java:342] - HikariPool-1 - Add connection elided, waiting 0, queue 1
+2024-12-11 19:23:21,451 DEBUG [HikariPool-1 housekeeper][HikariPool.java:342] - HikariPool-1 - Add connection elided, waiting 0, queue 1
+2024-12-11 19:23:21,451 DEBUG [HikariPool-1 housekeeper][HikariPool.java:342] - HikariPool-1 - Add connection elided, waiting 0, queue 1
+2024-12-11 19:23:21,451 DEBUG [HikariPool-1 housekeeper][HikariPool.java:342] - HikariPool-1 - Add connection elided, waiting 0, queue 1
+2024-12-11 19:23:21,451 DEBUG [HikariPool-1 housekeeper][HikariPool.java:342] - HikariPool-1 - Add connection elided, waiting 0, queue 1
+2024-12-11 19:23:21,451 DEBUG [HikariPool-1 housekeeper][HikariPool.java:342] - HikariPool-1 - Add connection elided, waiting 0, queue 1
+2024-12-11 19:23:21,451 DEBUG [HikariPool-1 housekeeper][HikariPool.java:342] - HikariPool-1 - Add connection elided, waiting 0, queue 1
+2024-12-11 19:23:21,476 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@34f43768: (connection has passed maxLifetime)
+2024-12-11 19:23:21,476 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@34f43768: (connection has passed maxLifetime)
+2024-12-11 19:23:21,480 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1302531d: (connection has passed maxLifetime)
+2024-12-11 19:23:21,480 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1302531d: (connection has passed maxLifetime)
+2024-12-11 19:23:21,481 DEBUG [HikariPool-1 connection closer][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:23:21,481 DEBUG [HikariPool-1 connection closer][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:23:21,481 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5e413069: (connection has passed maxLifetime)
+2024-12-11 19:23:21,481 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5e413069: (connection has passed maxLifetime)
+2024-12-11 19:23:21,482 DEBUG [HikariPool-1 connection closer][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:23:21,482 DEBUG [HikariPool-1 connection closer][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:23:21,483 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@75c93d53: (connection has passed maxLifetime)
+2024-12-11 19:23:21,483 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@75c93d53: (connection has passed maxLifetime)
+2024-12-11 19:23:21,484 DEBUG [HikariPool-1 connection closer][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:23:21,484 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1f7c3a52: (connection has passed maxLifetime)
+2024-12-11 19:23:21,484 DEBUG [HikariPool-1 connection closer][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:23:21,484 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1f7c3a52: (connection has passed maxLifetime)
+2024-12-11 19:23:21,485 DEBUG [HikariPool-1 connection closer][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:23:21,485 DEBUG [HikariPool-1 connection closer][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:23:21,486 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2e29260e: (connection has passed maxLifetime)
+2024-12-11 19:23:21,486 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2e29260e: (connection has passed maxLifetime)
+2024-12-11 19:23:21,486 DEBUG [HikariPool-1 connection closer][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:23:21,486 DEBUG [HikariPool-1 connection closer][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:23:21,486 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6b9a4b62: (connection has passed maxLifetime)
+2024-12-11 19:23:21,486 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6b9a4b62: (connection has passed maxLifetime)
+2024-12-11 19:23:21,487 DEBUG [HikariPool-1 connection closer][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:23:21,487 DEBUG [HikariPool-1 connection closer][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:23:21,487 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5a0af48e: (connection has passed maxLifetime)
+2024-12-11 19:23:21,487 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5a0af48e: (connection has passed maxLifetime)
+2024-12-11 19:23:21,487 DEBUG [HikariPool-1 connection closer][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:23:21,487 DEBUG [HikariPool-1 connection closer][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:23:21,487 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1b37feb5: (connection has passed maxLifetime)
+2024-12-11 19:23:21,487 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1b37feb5: (connection has passed maxLifetime)
+2024-12-11 19:23:21,501 DEBUG [HikariPool-1 connection closer][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:23:21,501 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5cf61258: (connection has passed maxLifetime)
+2024-12-11 19:23:21,503 DEBUG [HikariPool-1 connection closer][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:23:21,501 DEBUG [HikariPool-1 connection closer][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:23:21,501 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5cf61258: (connection has passed maxLifetime)
+2024-12-11 19:23:21,503 DEBUG [HikariPool-1 connection closer][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:23:21,765 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][ServerHttpAgent.java:169] - [NACOS SocketTimeoutException httpPost] currentServerAddr: http://192.168.128.130:8848， err : connect timed out
+2024-12-11 19:23:21,765 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.128.130:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=system-service.yamlgroup001xczxsystem-service-dev.yamlgroup001e93b00d33973c19ccea1d66c7cbd1ffdxczxlogging-dev.yamlxuecheng-plus-commonxczxsystem-servicegroup001xczx, tenant=xczx}
+2024-12-11 19:23:21,765 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:494] - Execute via interceptors :[com.alibaba.nacos.client.config.impl.ConfigHttpClientManager$LimiterHttpClientRequestInterceptor@3fa61c94]
+2024-12-11 19:23:21,765 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][ServerHttpAgent.java:169] - [NACOS SocketTimeoutException httpPost] currentServerAddr: http://192.168.128.130:8848， err : connect timed out
+2024-12-11 19:23:21,765 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.128.130:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=system-service.yamlgroup001xczxsystem-service-dev.yamlgroup001e93b00d33973c19ccea1d66c7cbd1ffdxczxlogging-dev.yamlxuecheng-plus-commonxczxsystem-servicegroup001xczx, tenant=xczx}
+2024-12-11 19:23:21,765 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:494] - Execute via interceptors :[com.alibaba.nacos.client.config.impl.ConfigHttpClientManager$LimiterHttpClientRequestInterceptor@3fa61c94]
+2024-12-11 19:23:22,165 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:23:22,165 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:23:22,992 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:617] - [NA] failed to request
+java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1202)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1138)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1032)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:966)
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:167)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2024-12-11 19:23:22,992 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:617] - [NA] failed to request
+java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1202)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1138)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1032)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:966)
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:167)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2024-12-11 19:23:23,003 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:530] - request 192.168.128.130:8848 failed.
+ErrCode:500, ErrMsg:connect timed out
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:618)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:167)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1202)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1138)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1032)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:966)
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603)
+	... 11 more
+2024-12-11 19:23:23,003 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:530] - request 192.168.128.130:8848 failed.
+ErrCode:500, ErrMsg:connect timed out
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:618)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:167)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1202)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1138)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1032)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:966)
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603)
+	... 11 more
+2024-12-11 19:23:23,010 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:23:23,010 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:23:23,134 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:23:23,134 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:23:24,737 INFO [com.alibaba.nacos.client.naming.updater][HostReactor.java:238] - removed ips(1) service: group001@@system-service@@DEFAULT -> [{"instanceId":"10.64.116.68#63045#DEFAULT#group001@@system-service","ip":"10.64.116.68","port":63045,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"group001@@system-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2024-12-11 19:23:24,737 INFO [com.alibaba.nacos.client.naming.updater][HostReactor.java:238] - removed ips(1) service: group001@@system-service@@DEFAULT -> [{"instanceId":"10.64.116.68#63045#DEFAULT#group001@@system-service","ip":"10.64.116.68","port":63045,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"group001@@system-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2024-12-11 19:23:24,741 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@ea37fdb will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@10ed037a
+2024-12-11 19:23:24,741 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@ea37fdb will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@10ed037a
+2024-12-11 19:23:24,748 INFO [com.alibaba.nacos.client.naming.updater][HostReactor.java:271] - current ips:(0) service: group001@@system-service@@DEFAULT -> []
+2024-12-11 19:23:24,748 INFO [com.alibaba.nacos.client.naming.updater][HostReactor.java:271] - current ips:(0) service: group001@@system-service@@DEFAULT -> []
+2024-12-11 19:23:24,772 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][ServerHttpAgent.java:169] - [NACOS SocketTimeoutException httpPost] currentServerAddr: http://192.168.128.130:8848， err : connect timed out
+2024-12-11 19:23:24,772 ERROR [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][ServerHttpAgent.java:169] - [NACOS SocketTimeoutException httpPost] currentServerAddr: http://192.168.128.130:8848， err : connect timed out
+2024-12-11 19:23:24,772 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.128.130:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=system-service.yamlgroup001xczxsystem-service-dev.yamlgroup001e93b00d33973c19ccea1d66c7cbd1ffdxczxlogging-dev.yamlxuecheng-plus-commonxczxsystem-servicegroup001xczx, tenant=xczx}
+2024-12-11 19:23:24,772 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.128.130:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=system-service.yamlgroup001xczxsystem-service-dev.yamlgroup001e93b00d33973c19ccea1d66c7cbd1ffdxczxlogging-dev.yamlxuecheng-plus-commonxczxsystem-servicegroup001xczx, tenant=xczx}
+2024-12-11 19:23:24,772 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:494] - Execute via interceptors :[com.alibaba.nacos.client.config.impl.ConfigHttpClientManager$LimiterHttpClientRequestInterceptor@3fa61c94]
+2024-12-11 19:23:24,772 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:494] - Execute via interceptors :[com.alibaba.nacos.client.config.impl.ConfigHttpClientManager$LimiterHttpClientRequestInterceptor@3fa61c94]
+2024-12-11 19:23:26,019 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:617] - [NA] failed to request
+java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1202)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1138)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1032)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:966)
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:167)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2024-12-11 19:23:26,023 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:530] - request 192.168.128.130:8848 failed.
+ErrCode:500, ErrMsg:connect timed out
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:618)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:167)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1202)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1138)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1032)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:966)
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603)
+	... 11 more
+2024-12-11 19:23:26,025 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:23:26,019 ERROR [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:617] - [NA] failed to request
+java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1202)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1138)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1032)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:966)
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:167)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2024-12-11 19:23:26,023 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:530] - request 192.168.128.130:8848 failed.
+ErrCode:500, ErrMsg:connect timed out
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:618)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.sendBeat(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.beat.BeatReactor$BeatTask.run(BeatReactor.java:167)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1202)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1138)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1032)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:966)
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603)
+	... 11 more
+2024-12-11 19:23:26,025 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:23:26,154 INFO [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:230] - [REGISTER-SERVICE] xczx registering service group001@@system-service with instance: Instance{instanceId='null', ip='10.64.116.68', port=63045, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='group001@@system-service', metadata={preserved.register.source=SPRING_CLOUD}}
+2024-12-11 19:23:26,154 INFO [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:230] - [REGISTER-SERVICE] xczx registering service group001@@system-service with instance: Instance{instanceId='null', ip='10.64.116.68', port=63045, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='group001@@system-service', metadata={preserved.register.source=SPRING_CLOUD}}
+2024-12-11 19:23:26,155 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.128.130:8848/nacos/v1/ns/instance?app=unknown&groupName=group001&metadata=%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D&namespaceId=xczx&port=63045&enable=true&healthy=true&clusterName=DEFAULT&ip=10.64.116.68&weight=1.0&ephemeral=true&serviceName=group001%40%40system-service, body: {}
+2024-12-11 19:23:26,155 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.128.130:8848/nacos/v1/ns/instance?app=unknown&groupName=group001&metadata=%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D&namespaceId=xczx&port=63045&enable=true&healthy=true&clusterName=DEFAULT&ip=10.64.116.68&weight=1.0&ephemeral=true&serviceName=group001%40%40system-service, body: {}
+2024-12-11 19:23:28,011 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:23:28,011 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:23:28,041 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:23:28,041 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:23:28,569 INFO [com.alibaba.nacos.client.naming.updater][HostReactor.java:232] - new ips(1) service: group001@@system-service@@DEFAULT -> [{"instanceId":"10.64.116.68#63045#DEFAULT#group001@@system-service","ip":"10.64.116.68","port":63045,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"group001@@system-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2024-12-11 19:23:28,569 INFO [com.alibaba.nacos.client.naming.updater][HostReactor.java:232] - new ips(1) service: group001@@system-service@@DEFAULT -> [{"instanceId":"10.64.116.68#63045#DEFAULT#group001@@system-service","ip":"10.64.116.68","port":63045,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"group001@@system-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2024-12-11 19:23:28,569 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@111f8ad will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@10ed037a
+2024-12-11 19:23:28,569 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@111f8ad will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@10ed037a
+2024-12-11 19:23:28,576 DEBUG [HikariPool-1 connection adder][HikariPool.java:728] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ad8772e
+2024-12-11 19:23:28,576 DEBUG [HikariPool-1 connection adder][HikariPool.java:728] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ad8772e
+2024-12-11 19:23:28,578 INFO [com.alibaba.nacos.client.naming.updater][HostReactor.java:271] - current ips:(1) service: group001@@system-service@@DEFAULT -> [{"instanceId":"10.64.116.68#63045#DEFAULT#group001@@system-service","ip":"10.64.116.68","port":63045,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"group001@@system-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2024-12-11 19:23:28,578 INFO [com.alibaba.nacos.client.naming.updater][HostReactor.java:271] - current ips:(1) service: group001@@system-service@@DEFAULT -> [{"instanceId":"10.64.116.68#63045#DEFAULT#group001@@system-service","ip":"10.64.116.68","port":63045,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"group001@@system-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2024-12-11 19:23:28,584 DEBUG [HikariPool-1 connection adder][HikariPool.java:728] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@be57d15
+2024-12-11 19:23:28,584 DEBUG [HikariPool-1 connection adder][HikariPool.java:728] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@be57d15
+2024-12-11 19:23:28,602 DEBUG [HikariPool-1 connection adder][HikariPool.java:728] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3aa4f48d
+2024-12-11 19:23:28,602 DEBUG [HikariPool-1 connection adder][HikariPool.java:728] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3aa4f48d
+2024-12-11 19:23:28,614 DEBUG [HikariPool-1 connection adder][HikariPool.java:728] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6bca825a
+2024-12-11 19:23:28,614 DEBUG [HikariPool-1 connection adder][HikariPool.java:728] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6bca825a
+2024-12-11 19:23:28,624 DEBUG [HikariPool-1 connection adder][HikariPool.java:728] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@21ea028d
+2024-12-11 19:23:28,624 DEBUG [HikariPool-1 connection adder][HikariPool.java:728] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@21ea028d
+2024-12-11 19:23:28,632 DEBUG [HikariPool-1 connection adder][HikariPool.java:728] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6f841d31
+2024-12-11 19:23:28,632 DEBUG [HikariPool-1 connection adder][HikariPool.java:728] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6f841d31
+2024-12-11 19:23:28,638 DEBUG [HikariPool-1 connection adder][HikariPool.java:728] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e34afda
+2024-12-11 19:23:28,638 DEBUG [HikariPool-1 connection adder][HikariPool.java:728] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e34afda
+2024-12-11 19:23:28,644 DEBUG [HikariPool-1 connection adder][HikariPool.java:728] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d506176
+2024-12-11 19:23:28,644 DEBUG [HikariPool-1 connection adder][HikariPool.java:728] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d506176
+2024-12-11 19:23:28,650 DEBUG [HikariPool-1 connection adder][HikariPool.java:728] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@101a29a8
+2024-12-11 19:23:28,650 DEBUG [HikariPool-1 connection adder][HikariPool.java:728] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@101a29a8
+2024-12-11 19:23:28,663 DEBUG [HikariPool-1 connection adder][HikariPool.java:728] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4877a635
+2024-12-11 19:23:28,663 DEBUG [HikariPool-1 connection adder][HikariPool.java:728] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4877a635
+2024-12-11 19:23:31,212 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:23:31,212 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:23:31,212 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:23:31,212 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:23:33,019 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:23:33,019 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:23:36,230 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:23:36,230 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:23:36,230 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:23:36,230 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:23:38,033 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:23:38,033 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:23:38,581 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:23:38,581 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:23:41,235 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:23:41,235 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:23:41,236 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:23:41,236 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:23:43,050 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:23:43,050 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:23:46,241 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:23:46,241 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:23:46,241 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:23:46,241 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:23:48,059 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:23:48,059 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:23:48,587 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:23:48,587 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:23:49,607 DEBUG [com.alibaba.nacos.client.naming.updater][NamingProxy.java:195] - server list provided by user: [192.168.128.130:8848]
+2024-12-11 19:23:49,607 DEBUG [com.alibaba.nacos.client.naming.updater][NamingProxy.java:195] - server list provided by user: [192.168.128.130:8848]
+2024-12-11 19:23:51,261 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:23:51,261 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:23:51,262 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:23:51,262 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:23:51,461 DEBUG [HikariPool-1 housekeeper][HikariPool.java:421] - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-12-11 19:23:51,461 DEBUG [HikariPool-1 housekeeper][HikariPool.java:421] - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-12-11 19:23:51,461 DEBUG [HikariPool-1 housekeeper][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:23:51,461 DEBUG [HikariPool-1 housekeeper][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:23:53,061 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:23:53,061 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:23:54,301 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.128.130:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=system-service.yamlgroup001xczxsystem-service-dev.yamlgroup001e93b00d33973c19ccea1d66c7cbd1ffdxczxlogging-dev.yamlxuecheng-plus-commonxczxsystem-servicegroup001xczx, tenant=xczx}
+2024-12-11 19:23:54,301 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:494] - Execute via interceptors :[com.alibaba.nacos.client.config.impl.ConfigHttpClientManager$LimiterHttpClientRequestInterceptor@3fa61c94]
+2024-12-11 19:23:54,301 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.128.130:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=system-service.yamlgroup001xczxsystem-service-dev.yamlgroup001e93b00d33973c19ccea1d66c7cbd1ffdxczxlogging-dev.yamlxuecheng-plus-commonxczxsystem-servicegroup001xczx, tenant=xczx}
+2024-12-11 19:23:54,301 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:494] - Execute via interceptors :[com.alibaba.nacos.client.config.impl.ConfigHttpClientManager$LimiterHttpClientRequestInterceptor@3fa61c94]
+2024-12-11 19:23:56,270 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:23:56,270 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:23:56,270 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:23:56,270 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:23:58,069 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:23:58,069 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:23:58,593 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:23:58,593 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:24:01,276 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:24:01,276 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:24:01,276 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:24:01,276 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:24:03,081 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:24:03,081 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:24:06,295 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:24:06,295 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:24:06,303 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:24:06,303 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:24:08,097 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:24:08,097 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:24:08,613 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:24:08,613 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:24:11,313 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:24:11,314 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:24:11,313 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:24:11,314 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:24:13,098 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:24:13,098 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:24:16,326 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:24:16,326 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:24:16,326 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:24:16,326 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:24:18,107 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:24:18,107 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:24:18,625 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:24:18,625 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:24:19,615 DEBUG [com.alibaba.nacos.client.naming.updater][NamingProxy.java:195] - server list provided by user: [192.168.128.130:8848]
+2024-12-11 19:24:19,615 DEBUG [com.alibaba.nacos.client.naming.updater][NamingProxy.java:195] - server list provided by user: [192.168.128.130:8848]
+2024-12-11 19:24:21,347 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:24:21,347 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:24:21,347 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:24:21,347 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:24:21,473 DEBUG [HikariPool-1 housekeeper][HikariPool.java:421] - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-12-11 19:24:21,473 DEBUG [HikariPool-1 housekeeper][HikariPool.java:421] - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-12-11 19:24:21,473 DEBUG [HikariPool-1 housekeeper][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:24:21,473 DEBUG [HikariPool-1 housekeeper][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:24:23,108 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:24:23,108 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:24:23,808 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.128.130:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=system-service.yamlgroup001xczxsystem-service-dev.yamlgroup001e93b00d33973c19ccea1d66c7cbd1ffdxczxlogging-dev.yamlxuecheng-plus-commonxczxsystem-servicegroup001xczx, tenant=xczx}
+2024-12-11 19:24:23,808 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.128.130:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=system-service.yamlgroup001xczxsystem-service-dev.yamlgroup001e93b00d33973c19ccea1d66c7cbd1ffdxczxlogging-dev.yamlxuecheng-plus-commonxczxsystem-servicegroup001xczx, tenant=xczx}
+2024-12-11 19:24:23,808 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:494] - Execute via interceptors :[com.alibaba.nacos.client.config.impl.ConfigHttpClientManager$LimiterHttpClientRequestInterceptor@3fa61c94]
+2024-12-11 19:24:23,808 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:494] - Execute via interceptors :[com.alibaba.nacos.client.config.impl.ConfigHttpClientManager$LimiterHttpClientRequestInterceptor@3fa61c94]
+2024-12-11 19:24:26,363 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:24:26,363 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:24:26,363 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:24:26,363 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:24:28,118 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:24:28,118 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:24:28,644 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:24:28,644 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:24:31,371 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:24:31,371 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:24:31,371 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:24:31,371 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:24:33,132 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:24:33,132 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:24:36,406 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:24:36,406 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:24:36,406 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:24:36,406 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:24:38,143 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:24:38,143 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:24:38,653 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:24:38,653 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:24:41,411 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:24:41,411 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:24:41,411 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:24:41,411 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:24:43,150 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:24:43,150 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:24:46,426 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:24:46,428 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:24:46,426 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:24:46,428 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:24:48,161 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:24:48,161 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:24:48,669 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:24:48,669 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:24:49,628 DEBUG [com.alibaba.nacos.client.naming.updater][NamingProxy.java:195] - server list provided by user: [192.168.128.130:8848]
+2024-12-11 19:24:49,628 DEBUG [com.alibaba.nacos.client.naming.updater][NamingProxy.java:195] - server list provided by user: [192.168.128.130:8848]
+2024-12-11 19:24:51,434 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:24:51,434 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:24:51,434 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:24:51,434 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:24:51,482 DEBUG [HikariPool-1 housekeeper][HikariPool.java:421] - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-12-11 19:24:51,482 DEBUG [HikariPool-1 housekeeper][HikariPool.java:421] - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-12-11 19:24:51,482 DEBUG [HikariPool-1 housekeeper][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:24:51,482 DEBUG [HikariPool-1 housekeeper][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:24:53,175 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:24:53,175 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:24:53,315 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.128.130:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=system-service.yamlgroup001xczxsystem-service-dev.yamlgroup001e93b00d33973c19ccea1d66c7cbd1ffdxczxlogging-dev.yamlxuecheng-plus-commonxczxsystem-servicegroup001xczx, tenant=xczx}
+2024-12-11 19:24:53,315 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.128.130:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=system-service.yamlgroup001xczxsystem-service-dev.yamlgroup001e93b00d33973c19ccea1d66c7cbd1ffdxczxlogging-dev.yamlxuecheng-plus-commonxczxsystem-servicegroup001xczx, tenant=xczx}
+2024-12-11 19:24:53,315 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:494] - Execute via interceptors :[com.alibaba.nacos.client.config.impl.ConfigHttpClientManager$LimiterHttpClientRequestInterceptor@3fa61c94]
+2024-12-11 19:24:53,315 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:494] - Execute via interceptors :[com.alibaba.nacos.client.config.impl.ConfigHttpClientManager$LimiterHttpClientRequestInterceptor@3fa61c94]
+2024-12-11 19:24:56,444 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:24:56,444 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:24:56,447 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:24:56,447 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:24:58,187 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:24:58,187 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:24:58,688 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:24:58,688 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:25:01,467 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:25:01,467 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:25:01,467 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:25:01,467 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:25:03,191 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:25:03,191 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:25:06,483 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:25:06,483 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:25:06,483 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:25:06,483 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:25:08,195 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:25:08,195 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:25:08,693 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:25:08,693 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:25:11,491 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:25:11,492 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:25:11,491 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:25:11,492 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:25:13,207 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:25:13,207 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:25:16,506 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:25:16,506 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:25:16,507 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:25:16,507 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:25:18,217 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:25:18,217 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:25:18,703 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:25:18,703 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:25:19,633 DEBUG [com.alibaba.nacos.client.naming.updater][NamingProxy.java:195] - server list provided by user: [192.168.128.130:8848]
+2024-12-11 19:25:19,633 DEBUG [com.alibaba.nacos.client.naming.updater][NamingProxy.java:195] - server list provided by user: [192.168.128.130:8848]
+2024-12-11 19:25:21,488 DEBUG [HikariPool-1 housekeeper][HikariPool.java:421] - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-12-11 19:25:21,488 DEBUG [HikariPool-1 housekeeper][HikariPool.java:421] - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-12-11 19:25:21,488 DEBUG [HikariPool-1 housekeeper][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:25:21,488 DEBUG [HikariPool-1 housekeeper][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:25:21,519 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:25:21,519 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:25:21,519 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:25:21,519 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:25:22,823 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.128.130:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=system-service.yamlgroup001xczxsystem-service-dev.yamlgroup001e93b00d33973c19ccea1d66c7cbd1ffdxczxlogging-dev.yamlxuecheng-plus-commonxczxsystem-servicegroup001xczx, tenant=xczx}
+2024-12-11 19:25:22,823 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.128.130:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=system-service.yamlgroup001xczxsystem-service-dev.yamlgroup001e93b00d33973c19ccea1d66c7cbd1ffdxczxlogging-dev.yamlxuecheng-plus-commonxczxsystem-servicegroup001xczx, tenant=xczx}
+2024-12-11 19:25:22,823 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:494] - Execute via interceptors :[com.alibaba.nacos.client.config.impl.ConfigHttpClientManager$LimiterHttpClientRequestInterceptor@3fa61c94]
+2024-12-11 19:25:22,823 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:494] - Execute via interceptors :[com.alibaba.nacos.client.config.impl.ConfigHttpClientManager$LimiterHttpClientRequestInterceptor@3fa61c94]
+2024-12-11 19:25:23,222 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:25:23,222 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:25:26,525 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:25:26,525 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:25:26,525 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:25:26,525 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:25:28,223 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:25:28,223 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:25:28,721 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:25:28,721 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:25:31,541 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:25:31,541 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:25:31,541 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:25:31,541 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:25:33,238 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:25:33,238 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:25:36,550 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:25:36,550 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:25:36,550 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:25:36,550 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:25:38,246 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:25:38,246 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:25:38,729 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:25:38,729 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:25:41,561 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:25:41,561 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:25:41,561 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:25:41,561 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:25:43,262 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:25:43,262 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:25:46,571 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:25:46,571 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:25:46,573 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:25:46,573 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:25:48,272 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:25:48,272 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:25:48,743 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:25:48,743 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:25:49,652 DEBUG [com.alibaba.nacos.client.naming.updater][NamingProxy.java:195] - server list provided by user: [192.168.128.130:8848]
+2024-12-11 19:25:49,652 DEBUG [com.alibaba.nacos.client.naming.updater][NamingProxy.java:195] - server list provided by user: [192.168.128.130:8848]
+2024-12-11 19:25:51,503 DEBUG [HikariPool-1 housekeeper][HikariPool.java:421] - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-12-11 19:25:51,503 DEBUG [HikariPool-1 housekeeper][HikariPool.java:421] - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-12-11 19:25:51,503 DEBUG [HikariPool-1 housekeeper][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:25:51,503 DEBUG [HikariPool-1 housekeeper][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2024-12-11 19:25:51,591 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:25:51,591 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:25:51,591 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:25:51,591 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:25:52,362 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.128.130:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=system-service.yamlgroup001xczxsystem-service-dev.yamlgroup001e93b00d33973c19ccea1d66c7cbd1ffdxczxlogging-dev.yamlxuecheng-plus-commonxczxsystem-servicegroup001xczx, tenant=xczx}
+2024-12-11 19:25:52,363 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:494] - Execute via interceptors :[com.alibaba.nacos.client.config.impl.ConfigHttpClientManager$LimiterHttpClientRequestInterceptor@3fa61c94]
+2024-12-11 19:25:52,362 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.128.130:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=system-service.yamlgroup001xczxsystem-service-dev.yamlgroup001e93b00d33973c19ccea1d66c7cbd1ffdxczxlogging-dev.yamlxuecheng-plus-commonxczxsystem-servicegroup001xczx, tenant=xczx}
+2024-12-11 19:25:52,363 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.128.130_8848-xczx][NacosRestTemplate.java:494] - Execute via interceptors :[com.alibaba.nacos.client.config.impl.ConfigHttpClientManager$LimiterHttpClientRequestInterceptor@3fa61c94]
+2024-12-11 19:25:53,287 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:25:53,287 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:25:56,597 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:25:56,597 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:25:56,597 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:25:56,597 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:25:58,299 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:25:58,299 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:25:58,763 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:25:58,763 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.128.130:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=xczx&clientIP=10.64.116.68&serviceName=group001%40%40system-service&udpPort=49665&clusters=DEFAULT, body: {}
+2024-12-11 19:26:01,505 WARN [Thread-20][NotifyCenter.java:145] - [NotifyCenter] Start destroying Publisher
+2024-12-11 19:26:01,505 WARN [Thread-20][NotifyCenter.java:145] - [NotifyCenter] Start destroying Publisher
+2024-12-11 19:26:01,505 WARN [Thread-20][NotifyCenter.java:162] - [NotifyCenter] Destruction of the end
+2024-12-11 19:26:01,505 WARN [Thread-20][NotifyCenter.java:162] - [NotifyCenter] Destruction of the end
+2024-12-11 19:26:01,505 WARN [Thread-3][HttpClientBeanHolder.java:108] - [HttpClientBeanHolder] Start destroying common HttpClient
+2024-12-11 19:26:01,505 WARN [Thread-3][HttpClientBeanHolder.java:108] - [HttpClientBeanHolder] Start destroying common HttpClient
+2024-12-11 19:26:01,507 WARN [Thread-3][HttpClientBeanHolder.java:114] - [HttpClientBeanHolder] Destruction of the end
+2024-12-11 19:26:01,507 WARN [Thread-3][HttpClientBeanHolder.java:114] - [HttpClientBeanHolder] Destruction of the end
+2024-12-11 19:26:01,606 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:26:01,606 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] xczx sending beat to server: BeatInfo{port=63045, ip='10.64.116.68', weight=1.0, serviceName='group001@@system-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2024-12-11 19:26:01,606 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:26:01,606 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.128.130:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=group001%40%40system-service&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68, body: {}
+2024-12-11 19:26:01,776 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2024-12-11 19:26:01,776 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2024-12-11 19:26:01,782 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'taskScheduler'
+2024-12-11 19:26:01,782 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'taskScheduler'
+2024-12-11 19:26:01,783 INFO [SpringContextShutdownHook][NacosServiceRegistry.java:94] - De-registering from Nacos Server now...
+2024-12-11 19:26:01,783 INFO [SpringContextShutdownHook][NacosServiceRegistry.java:94] - De-registering from Nacos Server now...
+2024-12-11 19:26:01,783 INFO [SpringContextShutdownHook][BeatReactor.java:101] - [BEAT] removing beat: group001@@system-service:10.64.116.68:63045 from beat map.
+2024-12-11 19:26:01,783 INFO [SpringContextShutdownHook][BeatReactor.java:101] - [BEAT] removing beat: group001@@system-service:10.64.116.68:63045 from beat map.
+2024-12-11 19:26:01,783 INFO [SpringContextShutdownHook][NamingProxy.java:260] - [DEREGISTER-SERVICE] xczx deregistering service group001@@system-service with instance: Instance{instanceId='null', ip='10.64.116.68', port=63045, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2024-12-11 19:26:01,783 INFO [SpringContextShutdownHook][NamingProxy.java:260] - [DEREGISTER-SERVICE] xczx deregistering service group001@@system-service with instance: Instance{instanceId='null', ip='10.64.116.68', port=63045, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2024-12-11 19:26:01,784 DEBUG [SpringContextShutdownHook][NacosRestTemplate.java:476] - HTTP method: DELETE, url: http://192.168.128.130:8848/nacos/v1/ns/instance?app=unknown&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68&ephemeral=true&serviceName=group001%40%40system-service, body: {}
+2024-12-11 19:26:01,784 DEBUG [SpringContextShutdownHook][NacosRestTemplate.java:476] - HTTP method: DELETE, url: http://192.168.128.130:8848/nacos/v1/ns/instance?app=unknown&namespaceId=xczx&port=63045&clusterName=DEFAULT&ip=10.64.116.68&ephemeral=true&serviceName=group001%40%40system-service, body: {}
+2024-12-11 19:26:01,787 INFO [SpringContextShutdownHook][NacosServiceRegistry.java:114] - De-registration finished.
+2024-12-11 19:26:01,787 INFO [SpringContextShutdownHook][NacosServiceRegistry.java:114] - De-registration finished.
+2024-12-11 19:26:01,787 INFO [SpringContextShutdownHook][BeatReactor.java:147] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2024-12-11 19:26:01,787 INFO [SpringContextShutdownHook][BeatReactor.java:147] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2024-12-11 19:26:03,304 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:26:03,304 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:26:04,805 INFO [SpringContextShutdownHook][BeatReactor.java:149] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2024-12-11 19:26:04,805 INFO [SpringContextShutdownHook][BeatReactor.java:149] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2024-12-11 19:26:04,805 INFO [SpringContextShutdownHook][HostReactor.java:413] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2024-12-11 19:26:04,805 INFO [SpringContextShutdownHook][HostReactor.java:413] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2024-12-11 19:26:07,842 INFO [SpringContextShutdownHook][PushReceiver.java:132] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2024-12-11 19:26:07,842 INFO [SpringContextShutdownHook][PushReceiver.java:132] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2024-12-11 19:26:08,309 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:26:08,309 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2024-12-11 19:26:10,878 INFO [SpringContextShutdownHook][PushReceiver.java:136] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2024-12-11 19:26:10,878 INFO [SpringContextShutdownHook][PushReceiver.java:136] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2024-12-11 19:26:10,879 INFO [SpringContextShutdownHook][FailoverReactor.java:132] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2024-12-11 19:26:10,879 INFO [SpringContextShutdownHook][FailoverReactor.java:132] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2024-12-11 19:26:10,880 INFO [SpringContextShutdownHook][FailoverReactor.java:134] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2024-12-11 19:26:10,880 INFO [SpringContextShutdownHook][FailoverReactor.java:134] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2024-12-11 19:26:10,881 INFO [SpringContextShutdownHook][HostReactor.java:418] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2024-12-11 19:26:10,881 INFO [SpringContextShutdownHook][HostReactor.java:418] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2024-12-11 19:26:10,881 INFO [SpringContextShutdownHook][NamingProxy.java:719] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2024-12-11 19:26:10,881 INFO [SpringContextShutdownHook][NamingProxy.java:719] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2024-12-11 19:26:10,881 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:72] - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2024-12-11 19:26:10,881 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:72] - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2024-12-11 19:26:10,882 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:79] - [NamingHttpClientManager] Destruction of the end
+2024-12-11 19:26:10,882 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:79] - [NamingHttpClientManager] Destruction of the end
+2024-12-11 19:26:10,882 INFO [SpringContextShutdownHook][CredentialWatcher.java:105] - [null] CredentialWatcher is stopped
+2024-12-11 19:26:10,882 INFO [SpringContextShutdownHook][CredentialService.java:98] - [null] CredentialService is freed
+2024-12-11 19:26:10,882 INFO [SpringContextShutdownHook][NamingProxy.java:723] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2024-12-11 19:26:10,882 INFO [SpringContextShutdownHook][CredentialWatcher.java:105] - [null] CredentialWatcher is stopped
+2024-12-11 19:26:10,882 INFO [SpringContextShutdownHook][CredentialService.java:98] - [null] CredentialService is freed
+2024-12-11 19:26:10,882 INFO [SpringContextShutdownHook][NamingProxy.java:723] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2024-12-11 19:26:10,883 WARN [SpringContextShutdownHook][DisposableBeanAdapter.java:349] - Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2024-12-11 19:26:10,883 WARN [SpringContextShutdownHook][DisposableBeanAdapter.java:349] - Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2024-12-11 19:26:10,889 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-12-11 19:26:10,889 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-12-11 19:26:10,900 INFO [SpringContextShutdownHook][HikariDataSource.java:350] - HikariPool-1 - Shutdown initiated...
+2024-12-11 19:26:10,900 INFO [SpringContextShutdownHook][HikariDataSource.java:350] - HikariPool-1 - Shutdown initiated...
+2024-12-11 19:26:10,900 DEBUG [SpringContextShutdownHook][HikariPool.java:421] - HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2024-12-11 19:26:10,900 DEBUG [SpringContextShutdownHook][HikariPool.java:421] - HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2024-12-11 19:26:10,901 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4ad8772e: (connection evicted)
+2024-12-11 19:26:10,901 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4ad8772e: (connection evicted)
+2024-12-11 19:26:10,902 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@be57d15: (connection evicted)
+2024-12-11 19:26:10,902 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@be57d15: (connection evicted)
+2024-12-11 19:26:10,903 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3aa4f48d: (connection evicted)
+2024-12-11 19:26:10,903 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3aa4f48d: (connection evicted)
+2024-12-11 19:26:10,903 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6bca825a: (connection evicted)
+2024-12-11 19:26:10,903 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6bca825a: (connection evicted)
+2024-12-11 19:26:10,905 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@21ea028d: (connection evicted)
+2024-12-11 19:26:10,905 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@21ea028d: (connection evicted)
+2024-12-11 19:26:10,905 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6f841d31: (connection evicted)
+2024-12-11 19:26:10,905 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6f841d31: (connection evicted)
+2024-12-11 19:26:10,905 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1e34afda: (connection evicted)
+2024-12-11 19:26:10,905 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1e34afda: (connection evicted)
+2024-12-11 19:26:10,905 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1d506176: (connection evicted)
+2024-12-11 19:26:10,905 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1d506176: (connection evicted)
+2024-12-11 19:26:10,905 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@101a29a8: (connection evicted)
+2024-12-11 19:26:10,905 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@101a29a8: (connection evicted)
+2024-12-11 19:26:10,905 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4877a635: (connection evicted)
+2024-12-11 19:26:10,905 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4877a635: (connection evicted)
+2024-12-11 19:26:10,905 DEBUG [SpringContextShutdownHook][HikariPool.java:421] - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2024-12-11 19:26:10,905 DEBUG [SpringContextShutdownHook][HikariPool.java:421] - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2024-12-11 19:26:10,906 INFO [SpringContextShutdownHook][HikariDataSource.java:352] - HikariPool-1 - Shutdown completed.
+2024-12-11 19:26:10,906 INFO [SpringContextShutdownHook][HikariDataSource.java:352] - HikariPool-1 - Shutdown completed.

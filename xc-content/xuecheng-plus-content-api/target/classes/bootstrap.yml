@@ -1,0 +1,69 @@
+
+spring:
+  application:
+    name: co-se
+
+  cloud:
+    nacos:
+      server-addr: 192.168.128.130:8848
+
+      discovery:
+        namespace: xczx
+        group: group001
+
+      config:
+        namespace: xczx
+        group: group001
+        file-extension: yaml
+        refresh-enabled: true
+
+        shared-configs:
+          - data-id: freem-conf-${spring.profiles.active}.yml
+            group: group001
+            refresh: true
+
+  profiles:
+    active: dev
+  redis:
+    host: 192.168.128.130
+    port: 6379
+    password: 123456
+
+
+
+remote: 192.168.128.130
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+xxl:
+  job:
+    admin:
+      addresses: http://localhost:8080/xxl-job-admin
+    executor:
+      appname: coursepublish-job
+      address:
+      ip:
+      port: 9998
+      logpath: /data/applogs/xxl-job/jobhandler
+      logretentiondays: 30
+    accessToken: default_token
+
+feign:
+  hystrix:
+    enabled: true
+  circuitbreaker:
+    enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000  #熔断超时时间
+ribbon:
+  ConnectTimeout: 60000 #连接超时时间
+  ReadTimeout: 60000 #读超时时间
+  MaxAutoRetries: 0 #重试次数
+  MaxAutoRetriesNextServer: 1 #切换实例的重试次数

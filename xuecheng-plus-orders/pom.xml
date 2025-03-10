@@ -10,6 +10,11 @@
     </parent>
     <artifactId>xuecheng-plus-orders</artifactId>
     <packaging>pom</packaging>
+
+
+
+
+
     <modules>
         <module>xuecheng-plus-orders-api</module>
         <module>xuecheng-plus-orders-service</module>

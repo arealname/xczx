@@ -4,6 +4,11 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/xc-content.iml" filepath="$PROJECT_DIR$/xc-content.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/xc-plus.iml" filepath="$PROJECT_DIR$/.idea/xc-plus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-checkcode/xuecheng-plus-checkcode.iml" filepath="$PROJECT_DIR$/xuecheng-plus-checkcode/xuecheng-plus-checkcode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-orders/xuecheng-plus-orders.iml" filepath="$PROJECT_DIR$/xuecheng-plus-orders/xuecheng-plus-orders.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-orders/xuecheng-plus-orders-api/xuecheng-plus-orders-api.iml" filepath="$PROJECT_DIR$/xuecheng-plus-orders/xuecheng-plus-orders-api/xuecheng-plus-orders-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-orders/xuecheng-plus-orders-model/xuecheng-plus-orders-model.iml" filepath="$PROJECT_DIR$/xuecheng-plus-orders/xuecheng-plus-orders-model/xuecheng-plus-orders-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-orders/xuecheng-plus-orders-service/xuecheng-plus-orders-service.iml" filepath="$PROJECT_DIR$/xuecheng-plus-orders/xuecheng-plus-orders-service/xuecheng-plus-orders-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-system/xuecheng-plus-system-model/xuecheng-plus-system-model.iml" filepath="$PROJECT_DIR$/xuecheng-plus-system/xuecheng-plus-system-model/xuecheng-plus-system-model.iml" />
       <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-system/xuecheng-plus-system-service/xuecheng-plus-system-service.iml" filepath="$PROJECT_DIR$/xuecheng-plus-system/xuecheng-plus-system-service/xuecheng-plus-system-service.iml" />
     </modules>

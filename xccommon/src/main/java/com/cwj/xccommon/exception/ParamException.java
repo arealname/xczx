@@ -28,5 +28,9 @@ public class ParamException extends RuntimeException {
         else return "未知错误";
     }
 
+    public static void cast(String errMessage){
+        throw new ParamException(errMessage);
+    }
+
 
 }

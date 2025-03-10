@@ -97,6 +97,12 @@ public class CoursePublishServiceImpl extends ServiceImpl<CoursePublishMapper, C
         saveMsg(courseId);
     }
 
+    @Override
+    public CoursePublish getCoursePublish(Long courseId) {
+        CoursePublish coursePublish = coursePublishMapper.selectById(courseId);
+        return coursePublish ;
+    }
+
     @Autowired
     MqMessageService mqMessageService;
 

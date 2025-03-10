@@ -73,4 +73,23 @@ public class BigFilesController {
     }
 
 
+    @ApiOperation(value = "上传大文件")
+    @PostMapping("/upload/bigfile")
+    public RestResponse uploadMultiThread(@RequestBody  MultipartFile file
+                                    ) throws Exception {
+
+        Long companyId = 1232141425L;
+
+        UploadFileParamsDto uploadFileParamsDto = new UploadFileParamsDto();
+        uploadFileParamsDto.setFileType("001002");
+        uploadFileParamsDto.setTags("课程视频");
+        uploadFileParamsDto.setRemark("");
+        uploadFileParamsDto.setFilename(file.getOriginalFilename());
+
+
+        return mediaFileService.oneupload(companyId,uploadFileParamsDto,file);
+
+    }
+
+
 }

@@ -36,9 +36,14 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.security.MessageDigest;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -147,7 +152,6 @@ public class MediaFileServiceImpl implements MediaFileService {
         }
 
 
-
         MediaFiles mediaFiles = null;
         try {
             mediaFiles = mediaFileServiceProxy.updateDb(companyId, p, md5, uploadFileParamsDto, miniofilename);
@@ -157,7 +161,7 @@ public class MediaFileServiceImpl implements MediaFileService {
 
         UploadFileResultDto uploadFileResultDto = new UploadFileResultDto();
         BeanUtils.copyProperties(mediaFiles, uploadFileResultDto);
-        uploadFileResultDto.setUrl("/"+bu+"/"+uploadFileResultDto.getUrl());
+        uploadFileResultDto.setUrl("/" + bu + "/" + uploadFileResultDto.getUrl());
         return uploadFileResultDto;
 
     }
@@ -167,7 +171,7 @@ public class MediaFileServiceImpl implements MediaFileService {
     public String uploadHtml(String fname, MultipartFile f) {
         try {
             System.out.println(88888);
-            minioUtil.uploadHtmlFile("course",fname,f.getInputStream());
+            minioUtil.uploadHtmlFile("course", fname, f.getInputStream());
         } catch (Exception e) {
             System.out.println("发生错误");
             throw new RuntimeException(e);
@@ -175,9 +179,147 @@ public class MediaFileServiceImpl implements MediaFileService {
         return "666";
     }
 
+    boolean allsuccess(File f) throws InterruptedException {
 
 
+        //先对文件进行分片
 
+        long bsize = 1024 * 1024;
+
+        int bnum = (int) (f.length() % bsize == 0 ? f.length() / bsize : f.length() / bsize + 1);//个数
+
+        Path fd = null;
+        try {
+            fd = Files.createTempDirectory("myminio");
+
+            //将文件分块写入临时文件夹
+
+            RandomAccessFile rr = new RandomAccessFile(f, "r");
+
+            byte[] buffer = new byte[1024];
+
+            for (int i = 0; i < bnum; i++) {
+
+                //创建第I块文件
+                File fb = new File(fd + "/" + i);
+                if (!fb.exists()) {
+                    boolean newFile = fb.createNewFile();
+
+                    if (newFile) {
+                        RandomAccessFile rw = new RandomAccessFile(fb, "rw");
+                        int len = -1;
+                        while ((len = rr.read(buffer, 0, buffer.length)) != -1) {
+                            rw.write(buffer, 0, len);
+                            if (fb.length() >= bsize) break;
+                        }
+                        rw.close();
+                        System.out.println("finish the " + i + " block..");
+                    }
+                }
+
+            }
+            rr.close();
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+
+        AtomicInteger i = new AtomicInteger(1);
+
+        ThreadFactory threadFactory = (Runnable r) -> {   //lamda表达式定义线程工厂，如果通过类实现的话需要重写 newThread
+            Thread t = new Thread(r, "MyTFac" + "-thread-" + i.getAndIncrement());
+            t.setDaemon(false); // 设置为非守护线程
+            t.setPriority(Thread.NORM_PRIORITY);
+            return t;
+        };
+
+
+        ThreadPoolExecutor poolExecutor = new ThreadPoolExecutor(5, 10,
+                30l, TimeUnit.SECONDS, new ArrayBlockingQueue<>(5),
+                threadFactory, new ThreadPoolExecutor.CallerRunsPolicy()
+        );
+
+        CountDownLatch countDownLatch = new CountDownLatch(bnum);
+        String s = null;
+        try {
+            s = DigestUtils.md5Hex(new FileInputStream(f));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        for (int j = 0; j < bnum; j++) {
+
+            int finalJ = j;
+            String finalS = s;
+            Path finalFd = fd;
+
+            poolExecutor.submit(() -> {
+                try {
+                    //提交第i块任务到线程池
+                    Boolean result = checkChunk(finalS, finalJ).getResult();
+                    if (result) {
+                        System.out.println("第" + finalJ + "已经上传");
+                    } else {
+                        uploadChunk(finalS, finalJ, finalFd + "/" + finalJ).getResult();
+                        System.out.println("新上传" + finalJ);
+                    }
+                    Thread.sleep(700);
+                } catch (Exception e) {
+                    System.out.println("这里报错了：" + e.getMessage());
+
+                } finally {
+                    countDownLatch.countDown();
+                }
+            });
+        }
+
+        countDownLatch.await();
+
+        Path dir = fd;
+
+        try {
+            // 删除目录中的所有文件和子目录
+            Files.walk(dir)
+                    .sorted((a, b) -> -a.compareTo(b)) // 从最深层的文件开始删除
+                    .forEach(path -> {
+                        try {
+                            Files.delete(path);
+                            System.out.println("已删除: " + path);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    });
+            System.out.println("目录已删除: " + dir);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        poolExecutor.shutdown();
+        return true;
+
+
+    }
+
+    @Override
+    public RestResponse oneupload(Long companyId, UploadFileParamsDto uploadFileParamsDto, MultipartFile file) {
+        File tempFile = null;
+        try {
+            tempFile = File.createTempFile("minio", "temp");
+            //上传的文件拷贝到临时文件
+            file.transferTo(tempFile);
+
+            boolean allsuccess = allsuccess(tempFile);
+
+            return RestResponse.success();
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
 
 
     @Transactional
@@ -195,7 +337,6 @@ public class MediaFileServiceImpl implements MediaFileService {
             mediaFiles.setCompanyId(companyId);
             mediaFiles.setBucket(bu);
             mediaFiles.setStatus("1");
-
 
 
             mediaFiles.setUrl(miniofilename);
@@ -246,27 +387,31 @@ public class MediaFileServiceImpl implements MediaFileService {
 
     @Override
     public RestResponse<Boolean> checkChunk(String fileMd5, int chunkIndex) {
-        String ckpath= fileMd5.substring(0, 1) + "/" + fileMd5.substring(1, 2) + "/" + fileMd5 + "/" + chunkIndex;
-
-        GetObjectArgs mediafiles = GetObjectArgs.builder().bucket("mediafiles").object(ckpath).build();
+        String ckpath = fileMd5.substring(0, 1) + "/" + fileMd5.substring(1, 2) + "/" + fileMd5 + "/" + chunkIndex;
+        boolean res = false;
+//        GetObjectArgs mediafiles = GetObjectArgs.builder().bucket("mediafiles").object(ckpath).build();
+        StatObjectArgs mediafiles = StatObjectArgs.builder().bucket("mediafiles").object(ckpath).build();
         InputStream object = null;
         try {
-            object = minioClient.getObject(mediafiles);
+            minioClient.statObject(mediafiles);
+            res = true;
 //            Thread.sleep(300);
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            res = false;
+            System.out.println("经过检查，第"+chunkIndex+"块还没有上传");
         }
-        return RestResponse.success(object != null);
+        return RestResponse.success(res);
     }
 
     @Override
     public RestResponse<Boolean> uploadChunk(String fileMd5, int chuckIndex, String fp) {
 
-        File f=new File(fp);
+        File f = new File(fp);
         String folder = fileMd5.substring(0, 1) + "/" + fileMd5.substring(1, 2) + "/" + fileMd5 + "/";
         PutObjectArgs p = null;
+        FileInputStream fileInputStream = null;
         try {
-            FileInputStream fileInputStream = new FileInputStream(f);
+            fileInputStream = new FileInputStream(f);
             p = PutObjectArgs.builder().bucket("mediafiles")
                     .contentType("video/mp4").stream(fileInputStream, f.length(), -1)
                     .object(folder + chuckIndex)
@@ -280,6 +425,12 @@ public class MediaFileServiceImpl implements MediaFileService {
         } catch (Exception e) {
             System.out.println(e.getMessage());
             return RestResponse.success(false);
+        }
+
+        try {
+            fileInputStream.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
 
         return RestResponse.success(true);
@@ -296,7 +447,7 @@ public class MediaFileServiceImpl implements MediaFileService {
         //文件扩展名
         String extName = fileName.substring(fileName.lastIndexOf("."));
 
-        String targetpath=folder+fileMd5+extName;
+        String targetpath = folder + fileMd5 + extName;
 
 
         System.out.println(targetpath);
@@ -318,16 +469,16 @@ public class MediaFileServiceImpl implements MediaFileService {
                             .object(targetpath)
                             .sources(sourceObjectList)
                             .build());
-            System.out.println("合并文件成功:{}"+targetpath);
+            System.out.println("合并文件成功:{}" + targetpath);
         } catch (Exception e) {
-            System.out.println("合并文件成功:{}"+fileMd5+e.getMessage()+e);
+            System.out.println("合并文件成功:{}" + fileMd5 + e.getMessage() + e);
 //            log.debug("合并文件失败,fileMd5:{},异常:{}",);
             return RestResponse.validfail(false, "合并文件失败。");
         }
 
         Long b = valifyFile(targetpath, fileMd5);
-        if(b!=-1) {
-            removechunk(fileMd5,chunkTotal);
+        if (b != -1) {
+            removechunk(fileMd5, chunkTotal);
 
             uploadFileParamsDto.setFileSize(b);
 
@@ -347,11 +498,10 @@ public class MediaFileServiceImpl implements MediaFileService {
             }
 
             uploadFileParamsDto.setFileType(tp);
-            addProcessing(fileMd5,fileName,uploadFileParamsDto,"mediafiles",targetpath);
-            updateDb(companyId,p,fileMd5,uploadFileParamsDto,"/mediafiles/"+targetpath);
+            addProcessing(fileMd5, fileName, uploadFileParamsDto, "mediafiles", targetpath);
+            updateDb(companyId, p, fileMd5, uploadFileParamsDto, "/mediafiles/" + targetpath);
             System.out.println("合并完成");
-        }
-        else System.out.println("合并失败");
+        } else System.out.println("合并失败");
         return RestResponse.success(b);
 
     }
@@ -361,7 +511,7 @@ public class MediaFileServiceImpl implements MediaFileService {
         return mediaFilesMapper.selectById(mediaId);
     }
 
-    private void addProcessing(String fileMd5, String fileName, UploadFileParamsDto uploadFileParamsDto, String bu,String p) {
+    private void addProcessing(String fileMd5, String fileName, UploadFileParamsDto uploadFileParamsDto, String bu, String p) {
         //将新上传的大文件加入待处理数据表中
 
         MediaProcess mediaProcess = new MediaProcess();
@@ -378,15 +528,15 @@ public class MediaFileServiceImpl implements MediaFileService {
         mediaProcessMapper.insert(mediaProcess);
     }
 
-    public Long valifyFile(String mpath,String md5){
-        File f= downLoadfromminio(mpath);
+    public Long valifyFile(String mpath, String md5) {
+        File f = downLoadfromminio(mpath);
 
         try {
             FileInputStream fileInputStream = new FileInputStream(f);
 
             String s = DigestUtils.md5Hex(fileInputStream);
 
-            return s.equals(md5)?f.length():-1;
+            return s.equals(md5) ? f.length() : -1;
 
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
@@ -395,12 +545,12 @@ public class MediaFileServiceImpl implements MediaFileService {
         }
     }
 
-    public File downLoadfromminio(String p){
+    public File downLoadfromminio(String p) {
 
         return minioUtil.downLoadFileByStream(p);
     }
 
-    public void removechunk(String fileMd5,int total){
+    public void removechunk(String fileMd5, int total) {
         String chunkFileFolderPath = fileMd5.substring(0, 1) + "/" + fileMd5.substring(1, 2) + "/" + fileMd5 + "/";
         try {
             List<DeleteObject> deleteObjects = Stream.iterate(0, i -> ++i)
@@ -410,18 +560,18 @@ public class MediaFileServiceImpl implements MediaFileService {
 
             RemoveObjectsArgs removeObjectsArgs = RemoveObjectsArgs.builder().bucket("mediafiles").objects(deleteObjects).build();
             Iterable<Result<DeleteError>> results = minioClient.removeObjects(removeObjectsArgs);
-            results.forEach(r->{
+            results.forEach(r -> {
                 DeleteError deleteError = null;
                 try {
                     deleteError = r.get();
                 } catch (Exception e) {
                     e.printStackTrace();
-                    log.error("清除分块文件失败,objectname:{}",deleteError.objectName(),e);
+                    log.error("清除分块文件失败,objectname:{}", deleteError.objectName(), e);
                 }
             });
         } catch (Exception e) {
             e.printStackTrace();
-            log.error("清除分块文件失败,chunkFileFolderPath:{}",chunkFileFolderPath,e);
+            log.error("清除分块文件失败,chunkFileFolderPath:{}", chunkFileFolderPath, e);
         }
     }
 }

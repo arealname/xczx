@@ -4,6 +4,7 @@ import com.cwj.message.po.MqMessage;
 import com.cwj.message.service.MqMessageService;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.ibatis.reflection.ExceptionUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -37,6 +38,8 @@ public abstract class MqAbstractClass {
                 return ;
             }
             ExecutorService executorService = Executors.newFixedThreadPool(i);
+
+
 
 
             CountDownLatch countDownLatch = new CountDownLatch(i);

@@ -77,4 +77,7 @@ public interface MediaFileService {
     MediaFiles getFileById(String mediaId);
 
     public String uploadHtml(String name, MultipartFile f);
+
+
+    RestResponse oneupload(Long companyId, UploadFileParamsDto uploadFileParamsDto, MultipartFile file);
 }

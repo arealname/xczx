@@ -18,4 +18,6 @@ public interface CoursePublishService extends IService<CoursePublish> {
 
 
     public void publishCourse(Long companyId,Long courseId);
+
+    CoursePublish getCoursePublish(Long courseId);
 }

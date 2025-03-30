@@ -40,8 +40,6 @@ public abstract class MqAbstractClass {
             ExecutorService executorService = Executors.newFixedThreadPool(i);
 
 
-
-
             CountDownLatch countDownLatch = new CountDownLatch(i);
             messageList.forEach(message -> {
                 executorService.execute(() -> {

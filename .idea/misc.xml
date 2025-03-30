@@ -24,12 +24,14 @@
         <option value="$PROJECT_DIR$/xuecheng-plus-checkcode/pom.xml" />
         <option value="$PROJECT_DIR$/xuecheng-plus-orders/pom.xml" />
         <option value="$PROJECT_DIR$/xuecheng-plus-learning/pom.xml" />
+        <option value="$PROJECT_DIR$/xc-plus-ai/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/demo/pom.xml" />
         <option value="$PROJECT_DIR$/untitled/pom.xml" />
+        <option value="$PROJECT_DIR$/xc-plus-ai/pom.xml" />
         <option value="$PROJECT_DIR$/xcContent/pom.xml" />
         <option value="$PROJECT_DIR$/xcContent/untitled/pom.xml" />
         <option value="$PROJECT_DIR$/xccontent/pom.xml" />

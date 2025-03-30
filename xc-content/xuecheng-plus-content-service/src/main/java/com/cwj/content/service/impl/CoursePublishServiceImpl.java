@@ -1,6 +1,9 @@
 package com.cwj.content.service.impl;
 
+import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.cwj.content.config.MultipartSupportConfig;
+import com.cwj.content.feign.MediaClient;
 import com.cwj.content.mapper.CourseBaseMapper;
 import com.cwj.content.mapper.CoursePublishMapper;
 import com.cwj.content.mapper.CoursePublishPreMapper;
@@ -16,13 +19,27 @@ import com.cwj.content.service.TeachplanService;
 import com.cwj.message.po.MqMessage;
 import com.cwj.message.service.MqMessageService;
 import com.cwj.xccommon.exception.ParamException;
+import freemarker.template.Configuration;
+import freemarker.template.Template;
+import freemarker.template.TemplateException;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.io.IOUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.UUID;
 
 /**
  * <p>
@@ -73,7 +90,7 @@ public class CoursePublishServiceImpl extends ServiceImpl<CoursePublishMapper, C
 
         String auditStatus = courseBaseInfo.getAuditStatus();
         if(!auditStatus.equals("202004"))throw new ParamException("未通过审核");
-        if(!companyId.equals(courseBaseInfo.getCompanyId()))throw new ParamException("公司不服");
+        if(!companyId.equals(courseBaseInfo.getCompanyId()))throw new ParamException("公司不符");
 
         CoursePublishPre coursePublishPre = coursePublishPreMapper.selectById(courseId);
 
@@ -95,6 +112,9 @@ public class CoursePublishServiceImpl extends ServiceImpl<CoursePublishMapper, C
         int i = coursePublishPreMapper.deleteById(courseId);
 
         saveMsg(courseId);
+//        直接后续处理  redis，minio
+
+
     }
 
     @Override
@@ -107,12 +127,10 @@ public class CoursePublishServiceImpl extends ServiceImpl<CoursePublishMapper, C
     MqMessageService mqMessageService;
 
 
-
     public void saveMsg(Long courseId){
         MqMessage coursePublish = mqMessageService.addMessage("course_publish", String.valueOf(courseId), null, null);
         if(coursePublish==null){
            throw new ParamException("生成发布消息失败");
-
         }
     }
 }

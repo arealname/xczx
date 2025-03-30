@@ -99,6 +99,8 @@ public class CourseJob extends MqAbstractClass {
 
     public void savehtml(Long cid) throws IOException, TemplateException {
 
+       if(true) throw  new IOException("IO流出错");
+
         //配置freemarker
         Configuration configuration = new Configuration(Configuration.VERSION_2_3_19);
 

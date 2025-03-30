@@ -7,7 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
       </profile>
-      <profile name="Annotation profile for xuecheng-plus-orders" enabled="true">
+      <profile name="Annotation profile for xuecheng-plus-system" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -41,6 +41,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel target="17">
       <module name="untitled" target="1.8" />
+      <module name="xc-plus-ai" target="1.8" />
+      <module name="xc-plus-AI" target="1.8" />
       <module name="xcContent" target="1.8" />
       <module name="xccontent-api" target="1.5" />
       <module name="xccontent-model" target="1.8" />

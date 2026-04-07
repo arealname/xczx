@@ -1,0 +1,38 @@
+#微服务配置
+spring:
+  application:
+    name: order-se
+  cloud:
+    nacos:
+      server-addr: 192.168.128.130:8848
+      discovery:
+        namespace: xczx
+        group: group001
+      config:
+        namespace: xczx
+        group: group001
+        file-extension: yaml
+        refresh-enabled: true
+        shared-configs:
+          - data-id: rab-${spring.profiles.active}.yaml
+            group: group001
+            refresh: true
+
+
+
+  profiles:
+    active: dev
+
+pay:
+  alipay:
+    APP_ID:
+      9021000132653106
+    APP_PRIVATE_KEY:
+      MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCnuviiPk9n3nNotyBAaOhp9k/ll6qqC9EkUu0bBIUAVvUVwCFjSrHQzUDO6dj61WVvls2zAqBpmS5uYhC7het/chKd8R9dCv6m9FJ/qM1I2l2SnpWaT+HWMtbPc1OGVRDnQ7xuZ6PaYrib0+tIyryRs0ODEqe6f9Am+OMCjaI6tmuXC6F6xYxYuFldKECGcGuD5fpwgVsVtmZKO47Bo27N5nA3Vn+9nMR/hkd0JEXcS81y8YHGt/InUoMCm23MbVber9h43wlem6Wviy2mCId79DDNQQmVYFCpv0LZEW2rTbqgFTHFBUQKY5DtIE4Pvxd9xkxa2eZZzVuVYpQHQzBNAgMBAAECggEBAIkoxBkoixaNOiLvXVhOcX/1A/DjzZOwhh4GEg5966UTdueKbcMcWbw9nDmX0O+NgZ123E7+Xt77fJSXbMdsA9/8EG1HuDYFv6gXMz9hcj2ZE9vKAtxlZnAasr6BuFOpTGFRas19wufawsvqyASGhR1AUnzkzHQeAMFd1YVI/Ni079Ta0esWWGjE8/F30A8gtrhxdhqzYib7CWIw3dWHIHRMZRKAepRtkW+FIdKhL7rhPlVPlhmlouuTebKcNA9yV7txNbNHKB5MJt54ZjI2xZq8q/oVNUABFZ67eja7+e1Mqhd+kdHsU7rm4naaapL1lUp3msEYHsx/2uwO7jPlLaECgYEA4J6nwnW+hrOhpc8JU3XHCrCsAn4h2X+ophJMw9FWkzrndmvBvmgJV6aiAb0YRA/vB+Awg/2M4mQvynbU8yhgnjTpFyimpqsIBXNjngMeYBq1ird/rQVtvejJYyNz2gp6SjjUjuhq8tVoghnuLpOb3S0N+bPUZtRDanPdc9L8sVMCgYEAvym2a7Kip1XYFVDYQoSjscvja1XM7gcuunYY57jTuhTw3jWjcY6NoHNwSM/B5cR8SwaXqj4gHECtrrIdWOsFngnEYV+FaPsYF2n6N1kZMmqsQSqADk/emSy4dVj0ITUbBJ49fw1foXYfy3bsG60NNwdTETnAhWw/RfLjqHbUQ98CgYB4Xo0n+FERflGxuTEWOJdhcyu6aj1ZgL+vvz7D8PqkC3zeSQCaOMZI4lMO+3Z1gtRlNA7LrKRC7c1ugh+77ndYUKJYdsBXsG+r/Bn2I1WzypxeqdcRsUcN7iF9rxH2VocSH0JJEuO9Hf/TOHIbI57y96H1nhjEwhsegNi7qOUhYQKBgDh5OTQN3PF0cdayQIE+MCHZawENovH62zooo2jpeFszzojG7dchVwO8tsI75jtb1aBQfUPFALV4Ahdm9TaMj+dFWWeu0XnXHCHmpA3v23rCesrxpE0WGVvFE2VPdyfMSYQOv3omWEcZ34C7TDtM32ePWWHwXsjL1tFyVQEywbifAoGAbt7ZdX6pIEjyy+gcvm/6nrxH3YhvaGHL/k/C6YNV6YxuPDTMVun29V2W6lI2SmYlmo1pDdffoSBiqgCb4OQoODiFRhMD9EHM6AK2TYWZAI9kHalWtY6GvpyT0n8eZ5kDoQ4+3kFwkr4yeALLuvLXW4XTv5JySBHFepf1FiVVcBA=
+    ALIPAY_PUBLIC_KEY:
+      MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqKQmkdS5lpcJCD/Gt0V3NTWswaf37kLF53hjOKvhYwjKnhZtHHSoFqfqH37VARoa3zLa1VNZDsVQSIll0ET9Fvd0XsB7bjl1dLLMwwSGQXVmXZTbtGV5SDLbk2sZryDHp9wse0X+Jm24wMilvh/HNWVLhCuaaWF6sokd5eE2Ea28D/FAWBSYlnvzZi56iMBs4cLr8RU7we4l1kicJ4P+YH3u4ayvAHo9RVDDyo/JZGlbZppzhLpNf7htZovfatsFJv0Rg/nKVfqB3vWSwnqBJjFhOGpOzpx/AIXiXoyVWW1SDLBiZAmRthufFLeFTPQHeM8Pm8HnyWFOMfFvH2y2UwIDAQAB
+    Proxy:
+      https://c5f4-124-76-131-227.ngrok-free.app
+
+
+

@@ -1,0 +1,28 @@
+
+#微服务配置
+spring:
+  application:
+    name: learning-service
+  cloud:
+    nacos:
+      server-addr: 192.168.128.130:8848
+      discovery:
+        namespace: xczx
+        group: group001
+      config:
+        namespace: xczx
+        group: group001
+        file-extension: yaml
+        refresh-enabled: true
+
+        shared-configs:
+          - data-id: rab-${spring.profiles.active}.yaml
+            group: group001
+            refresh: true
+          - data-id: redis-${spring.profiles.active}.yaml
+            group: group001
+            refresh: true
+
+  profiles:
+    active: dev
+

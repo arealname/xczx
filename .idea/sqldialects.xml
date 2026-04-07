@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/../../BaiduNetdiskDownload/JavaP/hmxczx/xxl-job-2.3.1/doc/db/tables_xxl_job.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/../../BaiduNetdiskDownload/数据库/数据库/sql/mq_message.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/../../BaiduNetdiskDownload/数据库/数据库/sql/mq_message_history.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/../../BaiduNetdiskDownload/数据库/数据库/sql/xcplus_content.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/../../BaiduNetdiskDownload/数据库/数据库/sql/xcplus_learning.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/../../BaiduNetdiskDownload/数据库/数据库/sql/xcplus_media.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/../../BaiduNetdiskDownload/数据库/数据库/sql/xcplus_orders.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/../../BaiduNetdiskDownload/数据库/数据库/sql/xcplus_system.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/../../BaiduNetdiskDownload/数据库/数据库/sql/xcplus_users.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/.idea/queries/Query.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/.idea/queries/Query_1.sql" dialect="MySQL" />
+  </component>
+</project>

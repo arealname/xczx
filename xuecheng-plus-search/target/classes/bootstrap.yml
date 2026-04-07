@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: search
+  cloud:
+    nacos:
+      server-addr: 192.168.128.130:8848
+      discovery:
+        namespace: xczx
+        group: group001
+      config:
+        namespace: xczx
+        group: group001
+        file-extension: yaml
+        refresh-enabled: true
+        shared-configs:
+          - data-id: swagger-${spring.profiles.active}.yaml
+            group: xuecheng-plus-common
+            refresh: true
+          - data-id: logging-${spring.profiles.active}.yaml
+            group: xuecheng-plus-common
+            refresh: true
+
+  profiles:
+    active: dev
+
+
+elasticsearch:
+  hostlist: 192.168.128.130:9200
+  course:
+    index: course-publish
+    source_fields: id,name,mt,st,grade,charge,pic,price,originalPrice,validDays

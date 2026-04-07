@@ -1,0 +1,51 @@
+#微服务配置
+spring:
+  application:
+    name: me-se
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 200MB
+  cloud:
+    nacos:
+      server-addr: 192.168.128.130:8848
+      discovery:
+#        namespace: ${spring.profiles.active}
+        group: group001
+        namespace: xczx
+      config:
+#        namespace: ${spring.profiles.active}
+        group: group001
+        namespace: xczx
+        file-extension: yaml
+        refresh-enabled: true
+
+  profiles:
+    active: dev
+
+
+xxl:
+  job:
+    admin:
+      addresses: http://localhost:8080/xxl-job-admin
+    executor:
+      appname: videoexcutor
+      address:
+      ip:
+      port: 9999
+      logpath: /data/applogs/xxl-job/jobhandler
+      logretentiondays: 30
+    accessToken: default_token
+
+
+cwj:
+  minio:
+    minioDomain: http://192.168.128.130:9000
+    minioPublicKey: minio
+    minioSecretKey: minio123
+    minioBucket: mediafiles
+
+
+
+
+

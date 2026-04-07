@@ -33,9 +33,9 @@ public abstract class MqAbstractClass {
             int i = messageList.size();
 
             System.out.println(i);
-            System.out.println("取出待处理消息"+i+"条");
-            if(i<=0){
-                return ;
+            System.out.println("取出待处理消息" + i + "条");
+            if (i <= 0) {
+                return;
             }
             ExecutorService executorService = Executors.newFixedThreadPool(i);
 
@@ -43,13 +43,13 @@ public abstract class MqAbstractClass {
             CountDownLatch countDownLatch = new CountDownLatch(i);
             messageList.forEach(message -> {
                 executorService.execute(() -> {
-                    System.out.println("开始任务:{}"+ message);
+                    System.out.println("开始任务:{}" + message);
 
                     //处理任务
                     try {
                         boolean result = execute(message);
                         if (result) {
-                            System.out.println( message);
+                            System.out.println(message);
                             //更新任务状态,删除消息表记录,添加到历史表
                             int completed = mqMessageService.completed(message.getId());
                             if (completed > 0) {

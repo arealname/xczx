@@ -36,4 +36,7 @@ public class RedisCheckCodeStore implements CheckCodeService.CheckCodeStore {
     public void remove(String key) {
         redisTemplate.delete(key);
     }
+
+
+
 }

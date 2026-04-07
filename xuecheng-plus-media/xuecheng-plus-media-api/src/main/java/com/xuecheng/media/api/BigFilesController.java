@@ -5,7 +5,7 @@ import com.j256.simplemagic.ContentInfo;
 import com.j256.simplemagic.ContentInfoUtil;
 
 import com.xuecheng.media.model.dto.UploadFileParamsDto;
-import com.xuecheng.media.service.MediaFileService;
+import com.xuecheng.media.service.MediaFilesService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,19 +26,19 @@ public class BigFilesController {
 
 
     @Autowired
-    MediaFileService mediaFileService;
+    MediaFilesService mediaFilesService;
 
     @ApiOperation(value = "文件上传前检查文件")
     @PostMapping("/upload/checkfile")
     public RestResponse<Boolean> checkfile(@RequestParam("fileMd5") String fileMd5) throws Exception {
-        return mediaFileService.checkFile(fileMd5);
+        return mediaFilesService.checkFile(fileMd5);
     }
 
 
     @ApiOperation(value = "分块文件上传前的检测")
     @PostMapping("/upload/checkchunk")
     public RestResponse<Boolean> checkchunk(@RequestParam("fileMd5") String fileMd5, @RequestParam("chunk") int chunk) throws Exception {
-        return mediaFileService.checkChunk(fileMd5,chunk);
+        return mediaFilesService.checkChunk(fileMd5,chunk);
     }
 
     @ApiOperation(value = "上传分块文件")
@@ -50,7 +50,7 @@ public class BigFilesController {
         File templocal=File.createTempFile("minio",".temp");
         file.transferTo(templocal);
         String filepath=templocal.getAbsolutePath();
-        return mediaFileService.uploadChunk(fileMd5,chunk, filepath);
+        return mediaFilesService.uploadChunk(fileMd5,chunk, filepath);
     }
 
     @ApiOperation(value = "合并文件")
@@ -66,9 +66,7 @@ public class BigFilesController {
         uploadFileParamsDto.setTags("课程视频");
         uploadFileParamsDto.setRemark("");
         uploadFileParamsDto.setFilename(fileName);
-
-
-        return mediaFileService.mergechunks(companyId,fileMd5,chunkTotal,uploadFileParamsDto);
+        return mediaFilesService.mergechunks(companyId,fileMd5,chunkTotal,uploadFileParamsDto);
 
     }
 
@@ -87,7 +85,7 @@ public class BigFilesController {
         uploadFileParamsDto.setFilename(file.getOriginalFilename());
 
 
-        return mediaFileService.oneupload(companyId,uploadFileParamsDto,file);
+        return mediaFilesService.uploadBigFile(companyId,uploadFileParamsDto,file);
 
     }
 

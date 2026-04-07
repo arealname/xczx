@@ -7,6 +7,7 @@ import java.io.InputStream;
 public interface MinioUtil {
 
     public String buildpath(String prefix, String filename);
+
     public String uploadImgFile(String prefix, String filename, InputStream inputStream);
 
     /**

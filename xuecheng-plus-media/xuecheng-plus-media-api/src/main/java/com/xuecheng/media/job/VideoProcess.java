@@ -53,16 +53,33 @@ public class VideoProcess {
 
         int shardTotal = XxlJobHelper.getShardTotal();
         int shardIndex = XxlJobHelper.getShardIndex();
+        List<MediaProcess> list = null;
 
 
         log.info("分片参数：当前分片序号 = {}, 总分片数 = {}", shardIndex, shardTotal);
         log.info("开始执行第" + shardIndex + "批任务");
 
-        int i = Runtime.getRuntime().availableProcessors();
+        int size = 0;
 
-        List<MediaProcess> list = mediaProcessMapper.selectListByShardIndex(shardTotal, shardIndex, i);
+        try {
 
-        int size = list.size();
+            int i = Runtime.getRuntime().availableProcessors();
+
+            list = mediaProcessMapper.selectListByShardIndex(shardTotal, shardIndex, i);
+
+            size = list.size();
+
+            log.info("取出到的待处理视频任务数:{}", size);
+
+            if (size <= 0) {
+                log.info("当前分片没有任务需要处理");
+                return;
+            }
+        } catch (Exception e) {
+            log.error("获取待处理视频任务失败:{}", e.getMessage());
+            return;
+        }
+
 
         ExecutorService executorService = Executors.newFixedThreadPool(size);
 
@@ -86,10 +103,7 @@ public class VideoProcess {
 
     String ffmpeg_path = "D:\\LiulanqiDownload\\ffmpeg-master-latest-win64-gpl\\bin\\ffmpeg.exe";//ffmpeg的安装位置
     //源avi视频的路径
-    String video_path = "D:\\1.mp4";
-    //转换后mp4文件的名称
-    String mp4_name = "nacos02.mp4";
-    //转换后mp4文件的路径
+
     String mp4folder_path = "D://";
 
     @Autowired
@@ -101,12 +115,7 @@ public class VideoProcess {
     public void pvideo(MediaProcess mp) {
         String url = mp.getUrl();   //下载源文件
 
-
-
-
         File file = minioUtil.downLoadFileByStream(url);
-
-
 
         String targetname = "minio" + UUID.randomUUID() + mp.getFilePath().substring(mp.getFilePath().lastIndexOf("."));
 
@@ -116,9 +125,9 @@ public class VideoProcess {
         File f = new File(mp4folder_path + targetname);
 
         try {
-            String fileMd5=mp.getFileId();
-            String fp= fileMd5.substring(0, 1) + "/" + fileMd5.substring(1, 2) + "/" + fileMd5+"/";
-            String p = fp+fileMd5 + mp.getFilePath().substring(mp.getFilePath().lastIndexOf("."));
+            String fileMd5 = mp.getFileId();
+            String fp = fileMd5.substring(0, 1) + "/" + fileMd5.substring(1, 2) + "/" + fileMd5 + "/";
+            String p = fp + fileMd5 + mp.getFilePath().substring(mp.getFilePath().lastIndexOf("."));
 
             System.out.println(p);
             PutObjectArgs mediafiles = PutObjectArgs.builder().bucket("mediafiles")

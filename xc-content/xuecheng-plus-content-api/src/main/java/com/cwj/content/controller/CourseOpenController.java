@@ -29,6 +29,7 @@ public class CourseOpenController {
         return coursePreviewInfo;
     }
 
+    
 
 
 }

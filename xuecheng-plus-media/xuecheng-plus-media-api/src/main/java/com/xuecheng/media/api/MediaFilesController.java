@@ -10,7 +10,8 @@ import com.xuecheng.media.model.dto.UploadFileResultDto;
 import com.xuecheng.media.model.enu.FileEnum;
 import com.xuecheng.media.model.po.MediaFiles;
 
-import com.xuecheng.media.service.MediaFileService;
+
+import com.xuecheng.media.service.MediaFilesService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +35,7 @@ public class MediaFilesController {
 
 
     @Autowired
-    MediaFileService mediaFileService;
+    MediaFilesService mediaFilesService;
 
 //    @PostMapping("upload/coursefile")
 //    public UploadFileResultDto upl(@RequestBody MultipartFile filedata){
@@ -46,8 +47,7 @@ public class MediaFilesController {
     @PostMapping("/files")
     public PageResult<MediaFiles> list(PageParams pageParams, @RequestBody QueryMediaParamsDto queryMediaParamsDto) {
         Long companyId = 1232141425L;
-        return mediaFileService.queryMediaFiels(companyId, pageParams, queryMediaParamsDto);
-
+        return mediaFilesService.queryMediaFiels(companyId, pageParams, queryMediaParamsDto);
     }
 
     /**
@@ -66,25 +66,27 @@ public class MediaFilesController {
         System.out.println("到达miclient1111........");
         Long companyId = 1232141425L;
         UploadFileParamsDto uploadFileParamsDto = new UploadFileParamsDto();
-        //文件大小
-        uploadFileParamsDto.setFileSize(filedata.getSize());
+
+
+
         //文件名称
         uploadFileParamsDto.setFilename(filedata.getOriginalFilename());//文件名称
-        //图片
-        uploadFileParamsDto.setFileType("001001");
 
         //文件大小
         long fileSize = filedata.getSize();
         uploadFileParamsDto.setFileSize(fileSize);
-        //创建临时文件
 
+        //创建临时文件
         File tempFile = File.createTempFile("minio", "temp");
+
         //上传的文件拷贝到临时文件
         filedata.transferTo(tempFile);
+
         //文件路径
         String absolutePath = tempFile.getAbsolutePath();
+
         //上传文件
-        UploadFileResultDto uploadFileResultDto = mediaFileService.uploadFile(companyId, uploadFileParamsDto, absolutePath, folder, objectName);
+        UploadFileResultDto uploadFileResultDto = mediaFilesService.uploadSmallFile(companyId, uploadFileParamsDto, absolutePath, folder, objectName);
 
         return uploadFileResultDto;
     }
@@ -97,7 +99,7 @@ public class MediaFilesController {
                               @RequestParam(value = "objectName", required = false) String objectName) {
         try {
             System.out.println("到达miclient222........");
-            mediaFileService.uploadHtml(objectName, filedata);
+            mediaFilesService.uploadHtml(objectName, filedata);
         } catch (Exception e) {
             System.out.println("exception:999:"+ e);
             return "exception:999:"+ e;

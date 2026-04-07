@@ -65,7 +65,7 @@ public class CoursePublishServiceImpl extends ServiceImpl<CoursePublishMapper, C
         CourseBaseInfoDto courseBaseInfo = courseBaseInfoService.gid(courseId);
 
         //课程计划信息
-        List<TeachplanDto> teachplanTree= teachplanService.tn(courseId);
+        List<TeachplanDto> teachplanTree = teachplanService.tn(courseId);
 
         CoursePreviewDto coursePreviewDto = new CoursePreviewDto();
         coursePreviewDto.setCourseBase(courseBaseInfo);
@@ -78,7 +78,7 @@ public class CoursePublishServiceImpl extends ServiceImpl<CoursePublishMapper, C
     CoursePublishMapper coursePublishMapper;
     @Autowired
     CoursePublishPreMapper coursePublishPreMapper;
-    
+
     @Autowired
     CourseBaseMapper courseBaseMapper;
 
@@ -86,33 +86,36 @@ public class CoursePublishServiceImpl extends ServiceImpl<CoursePublishMapper, C
     @Transactional
     @Override
     public void publishCourse(Long companyId, Long courseId) {
+
+
+        /**
+         * 1、向课程发布表course_publish插入一条记录,记录来源于课程预发布表，如果存在则更新，发布状态为：已发布。
+         * 2、更新course_base表的课程发布状态为：已发布
+         * 3、删除课程预发布表的对应记录。
+         * 4、向mq_message消息表插入一条消息，消息类型为：course_publish
+         * 约束：
+         * 1、课程审核通过方可发布。
+         * 2、本机构只允许发布本机构的课程。
+         */
+
+
         CourseBaseInfoDto courseBaseInfo = courseBaseInfoService.getCourseBaseInfo(courseId);
 
+
+        if (!companyId.equals(courseBaseInfo.getCompanyId())) throw new ParamException("公司不符");
+
         String auditStatus = courseBaseInfo.getAuditStatus();
-        if(!auditStatus.equals("202004"))throw new ParamException("未通过审核");
-        if(!companyId.equals(courseBaseInfo.getCompanyId()))throw new ParamException("公司不符");
+        if (!auditStatus.equals("202004")) throw new ParamException("未通过审核");
 
-        CoursePublishPre coursePublishPre = coursePublishPreMapper.selectById(courseId);
+        saveCoursePublish(courseId);  //保存课程发布信息,包括课程基本信息、课程发布状态、课程计划等信息
 
-        CoursePublish coursePublish = new CoursePublish();
-        BeanUtils.copyProperties(coursePublishPre,coursePublish);
-        coursePublish.setStatus("203002");
 
-        CoursePublish coursePublishUpdate = coursePublishMapper.selectById(courseId);
-        if(coursePublishUpdate == null){
-            coursePublishMapper.insert(coursePublish);
-        }else{
-            coursePublishMapper.updateById(coursePublish);
-        }
+        saveMsg(courseId);  //保存消息到消息表，供后续发送消息使用
 
-        CourseBase courseBase = courseBaseMapper.selectById(courseId);
-        courseBase.setStatus("203002");
-        courseBaseMapper.updateById(courseBase);
 
         int i = coursePublishPreMapper.deleteById(courseId);
 
-        saveMsg(courseId);
-//        直接后续处理  redis，minio
+
 
 
     }
@@ -120,17 +123,43 @@ public class CoursePublishServiceImpl extends ServiceImpl<CoursePublishMapper, C
     @Override
     public CoursePublish getCoursePublish(Long courseId) {
         CoursePublish coursePublish = coursePublishMapper.selectById(courseId);
-        return coursePublish ;
+        return coursePublish;
     }
 
     @Autowired
     MqMessageService mqMessageService;
 
 
-    public void saveMsg(Long courseId){
+    private void saveCoursePublish(Long courseId) {
+        //整合课程发布信息
+        //查询课程预发布表
+        CoursePublishPre coursePublishPre = coursePublishPreMapper.selectById(courseId);
+        if (coursePublishPre == null) {
+            throw new ParamException("课程预发布信息不存在");
+        }
+
+        CoursePublish coursePublish = new CoursePublish();
+
+        //拷贝到课程发布对象
+        BeanUtils.copyProperties(coursePublishPre, coursePublish);
+        coursePublish.setStatus("203002");
+        CoursePublish coursePublishUpdate = coursePublishMapper.selectById(courseId);
+        if (coursePublishUpdate == null) {
+            coursePublishMapper.insert(coursePublish);
+        } else {
+            coursePublishMapper.updateById(coursePublish);
+        }
+        //更新课程基本表的发布状态
+        CourseBase courseBase = courseBaseMapper.selectById(courseId);
+        courseBase.setStatus("203002");
+        courseBaseMapper.updateById(courseBase);
+    }
+
+
+    public void saveMsg(Long courseId) {
         MqMessage coursePublish = mqMessageService.addMessage("course_publish", String.valueOf(courseId), null, null);
-        if(coursePublish==null){
-           throw new ParamException("生成发布消息失败");
+        if (coursePublish == null) {
+            throw new ParamException("生成发布消息失败");
         }
     }
 }

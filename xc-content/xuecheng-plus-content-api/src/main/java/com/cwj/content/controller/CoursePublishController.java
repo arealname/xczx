@@ -46,8 +46,6 @@ public class CoursePublishController {
 
         modelAndView.setViewName("course_template");
         return modelAndView;
-
-
     }
 
     @ResponseBody
@@ -91,6 +89,7 @@ public class CoursePublishController {
         if (coursePublish == null) {
             return new CoursePreviewDto();
         }
+        
 
         //课程基本信息
         CourseBaseInfoDto courseBase = new CourseBaseInfoDto();

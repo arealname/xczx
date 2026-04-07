@@ -3,7 +3,7 @@ package com.xuecheng.media.api;
 import com.cwj.xccommon.RestResponse;
 import com.cwj.xccommon.exception.ParamException;
 import com.xuecheng.media.model.po.MediaFiles;
-import com.xuecheng.media.service.MediaFileService;
+import com.xuecheng.media.service.MediaFilesService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
@@ -18,13 +18,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class MediaOpenController {
 
     @Autowired
-    MediaFileService mediaFileService;
+    MediaFilesService mediaFilesService;
 
     @ApiOperation("预览文件")
     @GetMapping("/preview/{mediaId}")
     public RestResponse<String> getPlayUrlByMediaId(@PathVariable String mediaId) {
 
-        MediaFiles mediaFiles = mediaFileService.getFileById(mediaId);
+        MediaFiles mediaFiles = mediaFilesService.getFileById(mediaId);
         if (mediaFiles == null || StringUtils.isEmpty(mediaFiles.getUrl())) {
             throw new ParamException("视频还没有转码处理");
         }

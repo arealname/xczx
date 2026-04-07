@@ -52,6 +52,7 @@ public class MyUserDetailService implements UserDetailsService {
         String id = user.getId();
         List<XcMenu> xcMenus = xcMenuMapper.selectPermissionByUserId(id);
         List<String> permissions = new ArrayList<>();
+
         if (xcMenus.size() <= 0) {
             //用户权限,如果不加则报Cannot pass a null GrantedAuthority collection
             permissions.add("p1");

@@ -64,31 +64,48 @@ public class CourseJob extends MqAbstractClass {
 
         //下面2步都完成才叫完成
 
+
+        saveredis(msg, l);
+        System.out.println("缓存成功");
+
         try {
-            saveredis(l);
-            System.out.println("缓存成功");
-            try {
-                savehtml(l);
-                System.out.println("静态化完成");
-            } catch (Exception e) {
-                System.out.println("静态化出错");
-                return false;
-            }
-        } catch (Exception e) {
-            System.out.println("缓存失败");
-            return false;
+            savehtml(msg,l);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (TemplateException e) {
+            throw new RuntimeException(e);
         }
+        System.out.println("静态化完成");
+
         return true;
     }
 
-    public void saveredis(Long cid) {
+
+    public void saveredis(MqMessage mqMessage, Long cid) {
+
+        //检查消息是否已经处理过，幂等性处理
+        Long mid=mqMessage.getId();
+
+        int stageOne = mqMessageService.getStageOne(mid);
+
+            if(stageOne<1){
+                log.debug("开始执行第一阶段任务");
+                int i = mqMessageService.completedStageOne(mid);
+                if(i>0){
+                    log.debug("完成第一阶段任务");
+                }
+
+            }else{
+                log.debug("无需执行第一阶段任务");
+                return;
+            }
 
         CoursePublish coursePublishPre = coursePublishPreMapper.selectById(cid);
 
         System.out.println(coursePublishPre);
         String jsonString = JSON.toJSONString(coursePublishPre);
         System.out.println(jsonString);
-        redisTemplate.opsForValue().set(cid.toString(),jsonString);
+        redisTemplate.opsForValue().set(cid.toString(), jsonString);
     }
 
     @Autowired
@@ -97,16 +114,32 @@ public class CourseJob extends MqAbstractClass {
     @Autowired
     MediaClient mediaClient;
 
-    public void savehtml(Long cid) throws IOException, TemplateException {
+    public void savehtml(MqMessage mqMessage,Long cid) throws IOException, TemplateException {
 
-       if(true) throw  new IOException("IO流出错");
+
+        //检查消息是否已经处理过，幂等性处理
+
+        Long mid=mqMessage.getId();
+        int stageTwo = mqMessageService.getStageTwo(mid);
+
+            if(stageTwo<1){
+                log.debug("开始执行第二阶段任务");
+                int i = mqMessageService.completedStageTwo(mid);
+                if(i>0){
+                    log.debug("完成第二阶段任务");
+                }
+
+            }else{
+                log.debug("无需执行第二阶段任务");
+                return;
+            }
+
 
         //配置freemarker
         Configuration configuration = new Configuration(Configuration.VERSION_2_3_19);
 
         //加载模板
         //选指定模板路径,classpath下templates下
-        //得到classpath路径
         String classpath = this.getClass().getResource("/").getPath();
         configuration.setDirectoryForTemplateLoading(new File(classpath + "/templates/"));
         //设置字符编码
@@ -129,7 +162,6 @@ public class CourseJob extends MqAbstractClass {
         InputStream inputStream = IOUtils.toInputStream(content);
 
 
-
         File tempFile = File.createTempFile("course" + UUID.randomUUID(), ".html");
         //输出流
         FileOutputStream outputStream = new FileOutputStream(tempFile);
@@ -142,15 +174,17 @@ public class CourseJob extends MqAbstractClass {
         System.out.println("存储为html");
     }
 
-    public MultipartFile convertFile(File f){
+    public MultipartFile convertFile(File f) {
         MultipartFile multipartFile = MultipartSupportConfig.getMultipartFile(f);
-        if(multipartFile==null)throw new ParamException("转换文件失败");
+        if (multipartFile == null) throw new ParamException("转换文件失败");
 
         return multipartFile;
     }
 
     @XxlJob("CoursePublishJobHandler")
     public void cphandler() {
+
+        String jobParam = XxlJobHelper.getJobParam();
 
         int shardIndex = XxlJobHelper.getShardIndex();
         int shardTotal = XxlJobHelper.getShardTotal();

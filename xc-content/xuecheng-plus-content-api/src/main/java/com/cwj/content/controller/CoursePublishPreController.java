@@ -21,3 +21,6 @@ public class CoursePublishPreController {
     @Autowired
     private CoursePublishPreService  coursePublishPreService;
 }
+
+
+

@@ -67,3 +67,7 @@ ribbon:
   ReadTimeout: 60000 #读超时时间
   MaxAutoRetries: 0 #重试次数
   MaxAutoRetriesNextServer: 1 #切换实例的重试次数
+
+canal:
+  destination: canalins
+  server: 192.168.128.130:11111

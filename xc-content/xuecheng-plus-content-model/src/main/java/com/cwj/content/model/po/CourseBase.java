@@ -2,6 +2,7 @@ package com.cwj.content.model.po;
 
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
+import org.springframework.data.annotation.Id;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -23,6 +24,7 @@ public class CourseBase implements Serializable {
      * 主键
      */
     @TableId(value = "id", type = IdType.AUTO)
+    @Id
     private Long id;
 
     /**

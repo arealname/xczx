@@ -23,6 +23,10 @@ public class PayMessageConfig implements ApplicationContextAware {
     public static final String MESSAGE_TYPE = "payresult_notify";
     //支付通知队列
     public static final String PAYNOTIFY_QUEUE = "paynotify_queue";
+    public static final String DELAY_EXCHANGE = "delay_exchange";
+    public static final String DELAY_ROUTING_KEY ="delay_routing_key"; ;
+    public static final String MANUAL_EXCHANGE = "manual_exchange";
+    public static final String MANUAL_ROUTING_KEY ="manual_routing_key"; ;
 
     @Bean(PAYNOTIFY_EXCHANGE_FANOUT)
     public FanoutExchange paynotify_exchange_fanout(){

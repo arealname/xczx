@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/xc-content.iml" filepath="$PROJECT_DIR$/xc-content.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/xc-plus.iml" filepath="$PROJECT_DIR$/.idea/xc-plus.iml" />
       <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-checkcode/xuecheng-plus-checkcode.iml" filepath="$PROJECT_DIR$/xuecheng-plus-checkcode/xuecheng-plus-checkcode.iml" />
-      <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-learning/xuecheng-plus-learning.iml" filepath="$PROJECT_DIR$/xuecheng-plus-learning/xuecheng-plus-learning.iml" />
       <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-learning/xuecheng-plus-learning-api/xuecheng-plus-learning-api.iml" filepath="$PROJECT_DIR$/xuecheng-plus-learning/xuecheng-plus-learning-api/xuecheng-plus-learning-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-learning/xuecheng-plus-learning-model/xuecheng-plus-learning-model.iml" filepath="$PROJECT_DIR$/xuecheng-plus-learning/xuecheng-plus-learning-model/xuecheng-plus-learning-model.iml" />
       <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-learning/xuecheng-plus-learning-service/xuecheng-plus-learning-service.iml" filepath="$PROJECT_DIR$/xuecheng-plus-learning/xuecheng-plus-learning-service/xuecheng-plus-learning-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-orders/xuecheng-plus-orders.iml" filepath="$PROJECT_DIR$/xuecheng-plus-orders/xuecheng-plus-orders.iml" />
       <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-orders/xuecheng-plus-orders-api/xuecheng-plus-orders-api.iml" filepath="$PROJECT_DIR$/xuecheng-plus-orders/xuecheng-plus-orders-api/xuecheng-plus-orders-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-orders/xuecheng-plus-orders-model/xuecheng-plus-orders-model.iml" filepath="$PROJECT_DIR$/xuecheng-plus-orders/xuecheng-plus-orders-model/xuecheng-plus-orders-model.iml" />
       <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-orders/xuecheng-plus-orders-service/xuecheng-plus-orders-service.iml" filepath="$PROJECT_DIR$/xuecheng-plus-orders/xuecheng-plus-orders-service/xuecheng-plus-orders-service.iml" />

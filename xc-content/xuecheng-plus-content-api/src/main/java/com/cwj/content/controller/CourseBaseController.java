@@ -2,6 +2,7 @@ package com.cwj.content.controller;
 
 import com.cwj.content.model.po.CourseBase;
 import com.cwj.content.service.CourseBaseService;
+import com.cwj.content.util.SecurityUtil;
 import com.cwj.xccommon.PageParams;
 import com.cwj.xccommon.PageResult;
 import com.cwj.content.model.po.dto.AddCourseDto;
@@ -33,6 +34,8 @@ public class CourseBaseController {
 
     @PostMapping("/course/list")  //分页参数，课程条件
     public PageResult<CourseBase> getcourselist(PageParams pageParams, @RequestBody QueryCourseParamsDto queryCourseParamsDto) {
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+//        SecurityUtil.getUser()
         return courseBaseService.list(pageParams, queryCourseParamsDto);
     }
 
@@ -50,8 +53,8 @@ public class CourseBaseController {
 
 
         //取出当前用户身份
-        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        System.out.println(principal);
+//        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+//        System.out.println(principal);
 
         return courseBaseService.gid(courseId);
     }

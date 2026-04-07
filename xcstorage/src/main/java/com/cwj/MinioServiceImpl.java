@@ -27,6 +27,7 @@ public class MinioServiceImpl implements MinioUtil {
 
     @Override
     public String buildpath(String prefix, String filename) {
+
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy");
         String format = simpleDateFormat.format(new Date());
         StringBuilder sb=new StringBuilder();
@@ -53,9 +54,8 @@ public class MinioServiceImpl implements MinioUtil {
             throw new RuntimeException(e);
         }
 
-        StringBuilder sb = new StringBuilder(minioProperties.getMinioDomain());
-        sb.append(buildpath);
-        return sb.toString();
+
+        return buildpath;
 
     }
 

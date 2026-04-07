@@ -16,8 +16,7 @@ public interface CoursePublishService extends IService<CoursePublish> {
 
     public CoursePreviewDto getCoursePreviewInfo(Long courseId);
 
-
-    public void publishCourse(Long companyId,Long courseId);
+    public void publishCourse(Long companyId, Long courseId);
 
     CoursePublish getCoursePublish(Long courseId);
 }
